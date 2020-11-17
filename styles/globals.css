@@ -11,6 +11,9 @@ a {
   text-decoration: none;
 }
 
+.subTitle {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 * {
   box-sizing: border-box;
 }

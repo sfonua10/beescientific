@@ -5,13 +5,12 @@ export default function Header() {
   return (
     <header className={styles.mainHeader}>
       <a className={styles.brandLogo}>
-        <img src="/images/favicon.ico" />
-        <div className={styles.brandLogoName}>Beescientific</div>
+        <img src="/images/bee_scientific_logo.svg" />
       </a>
       <nav className={styles.mainNav}>
         <ul>
           <li>
-            <a>Home</a>
+            <a>HOME</a>
           </li>
           <li>
             <a>BEE BARREL</a>
