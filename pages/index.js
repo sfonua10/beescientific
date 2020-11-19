@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Layout from '../components/layout';
+import FeatureBox from '../components/featureBox';
 
 export default function Home() {
   return (
@@ -20,6 +21,16 @@ export default function Home() {
           style={{ position: `absolute`, top: 0, right: 0, zIndex: -1 }}
         />
       </div>
+      <section>
+        <main style={{ maxWidth: 995, margin: `auto`, display: `flex` }}>
+          <FeatureBox />
+          <FeatureBox />
+          <FeatureBox />
+        </main>
+        <button style={{ display: `block`, margin: `0 auto`, marginTop: 48 }}>
+          LEARN MORE
+        </button>
+      </section>
     </Layout>
   );
 }
