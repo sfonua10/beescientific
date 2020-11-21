@@ -2,11 +2,19 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Layout from '../components/layout';
 import FeatureBox from '../components/featureBox';
+import Image from 'next/image';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaPinterestP,
+  FaYoutube,
+  FaInstagram,
+} from 'react-icons/fa';
 
 export default function Home() {
   return (
     <Layout>
-      <div style={{ display: `flex`, margin: `10rem` }}>
+      {/* <div style={{ display: `flex`, margin: `10rem` }}>
         <section style={{ maxWidth: 415 }}>
           <h1>Repopulate and Restore</h1>
           <p style={{ fontSize: `24px`, lineHeight: `27.27px` }}>
@@ -30,7 +38,61 @@ export default function Home() {
         <button style={{ display: `block`, margin: `0 auto`, marginTop: 48 }}>
           LEARN MORE
         </button>
+      </section> */}
+      <section style={{ display: `flex`, flexDirection: `column` }}>
+        <div>
+          <img
+            src="/images/beehives_hero.png"
+            alt="Picture of bee"
+            width={124}
+            height={130}
+          />{' '}
+          <img
+            src="/images/hero_bee.svg"
+            alt="Picture of bee"
+            width={351}
+            height={349}
+          />
+        </div>
+        <h2>Repopulate and Restore</h2>
+        <p>
+          Conserve an important natural resource with the award-winning Bee
+          Barrel system. Watch your bee colonies grow!
+        </p>
+        <button className="button">Take a look</button>
       </section>
+      <section>
+        <FeatureBox />
+        <FeatureBox />
+        <FeatureBox />
+        <button className="button">LEARN MORE</button>
+      </section>
+      <section>
+        <img src="/images/bee_barrels_home_1.png" />
+        <h2>Introducing the Bee Barrel</h2>
+        <p>An exciting solution for an invaluable natural resource</p>
+        <button className="button">LEARN MORE</button>
+      </section>
+      <section>
+        <img src="/images/bee_home_2.png" />
+        <h2>Contribute</h2>
+        <p>An exciting solution for an invaluable natural resource</p>
+        <button className="button">LEARN MORE</button>
+      </section>
+      <section>
+        <h3>CONNECT WITH US</h3>
+        <div>
+          <FaFacebookF />
+          <FaTwitter />
+          <FaPinterestP />
+          <FaYoutube />
+          <FaInstagram />
+        </div>
+      </section>
+      <footer style={{ background: `#959CB9` }}>
+        <p>&#169; 2020 BEESCIENTIFIC, LLC</p>
+        <p>ALL RIGHTS RESERVED.</p>
+      </footer>
     </Layout>
   );
 }

@@ -9,15 +9,26 @@ export default function Header() {
       </a>
       <nav className={styles.mainNav}>
         <ul>
-          <li>
-            <a>HOME</a>
+          {/* <li>
+            <Link href="/">
+              <a>HOME</a>
+            </Link>
           </li>
           <li>
-            <a>BEE BARREL</a>
+            <Link href="/beeBarrel">
+              <a>BEE BARREL</a>
+            </Link>
           </li>
           <li>
-            <a>ABOUT US</a>
-          </li>
+            <Link href="/about">
+              <a>ABOUT US</a>
+            </Link>
+          </li> */}
+          {/* <li>
+            <Link href="/contribute">
+              <a>CONTRIBUTE</a>
+            </Link>
+          </li> */}
         </ul>
       </nav>
     </header>
