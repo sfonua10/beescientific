@@ -5,11 +5,11 @@ export default function Header() {
   return (
     <header className={styles.mainHeader}>
       <a className={styles.brandLogo}>
-        <img src="/images/bee_scientific_logo.svg" />
+        <img src="/images/mobile_logo.png" />
       </a>
       <nav className={styles.mainNav}>
         <ul>
-          {/* <li>
+          <li>
             <Link href="/">
               <a>HOME</a>
             </Link>
@@ -23,7 +23,7 @@ export default function Header() {
             <Link href="/about">
               <a>ABOUT US</a>
             </Link>
-          </li> */}
+          </li>
           {/* <li>
             <Link href="/contribute">
               <a>CONTRIBUTE</a>

@@ -39,32 +39,36 @@ export default function Home() {
           LEARN MORE
         </button>
       </section> */}
-      <section style={{ display: `flex`, flexDirection: `column` }}>
-        <div>
-          <img
-            src="/images/beehives_hero.png"
-            alt="Picture of bee"
-            width={124}
-            height={130}
-          />{' '}
-          <img
-            src="/images/hero_bee.svg"
-            alt="Picture of bee"
-            width={351}
-            height={349}
-          />
-        </div>
-        <h2>Repopulate and Restore</h2>
-        <p>
-          Conserve an important natural resource with the award-winning Bee
-          Barrel system. Watch your bee colonies grow!
-        </p>
-        <button className="button">Take a look</button>
-      </section>
+
+      <div className={styles.heroImages}>
+        <img
+          className={styles.img1}
+          src="/images/beehives_hero.png"
+          alt="Picture of bee"
+          width={124}
+          height={130}
+        />{' '}
+        <img
+          className={styles.img2}
+          src="/images/hero_bee.svg"
+          alt="Picture of bee"
+          width={351}
+          height={349}
+        />
+      </div>
+      <h2>Repopulate and Restore</h2>
+      <p>
+        Conserve an important natural resource with the award-winning Bee Barrel
+        system. Watch your bee colonies grow!
+      </p>
+      <button className="button">Take a look</button>
+
       <section>
-        <FeatureBox />
-        <FeatureBox />
-        <FeatureBox />
+        <div className="homeGrid">
+          <FeatureBox />
+          <FeatureBox />
+          <FeatureBox />
+        </div>
         <button className="button">LEARN MORE</button>
       </section>
       <section>
