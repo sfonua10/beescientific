@@ -1,22 +1,19 @@
-const FeatureBox = () => {
+const FeatureBox = ({ vector, title, text }) => {
   return (
-    <div style={{ maxWidth: 350 }}>
-      <img src="/images/Vector.svg" width={40} height={40} />
+    <div style={{ maxWidth: 275, marginBottom: 56 }}>
+      <img src={vector} width={40} height={40} />
       <div
         style={{
           fontFamily: 'Avenir',
           fontWeight: 800,
-          fontSize: `24px`,
+          fontSize: `18px`,
           lineHeight: `32.78px`,
+          marginBottom: `16px`,
         }}
       >
-        Eco Friendly
+        {title}
       </div>
-      <p>
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui
-        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-        et quas molestias excepturi sint.
-      </p>
+      <p>{text}</p>
     </div>
   );
 };

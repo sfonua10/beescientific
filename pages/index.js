@@ -2,6 +2,8 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Layout from '../components/layout';
 import FeatureBox from '../components/featureBox';
+import MainTopic from '../components/mainTopics';
+
 import Image from 'next/image';
 import {
   FaFacebookF,
@@ -12,34 +14,43 @@ import {
 } from 'react-icons/fa';
 
 export default function Home() {
+  const data = [
+    {
+      src: '/images/leaf_vector.svg',
+      title: 'Environmentaly Friendly',
+      text:
+        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.',
+    },
+    {
+      src: '/images/tool_vector.svg',
+      title: 'Durable Construction',
+      text:
+        'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id.',
+    },
+    {
+      src: '/images/clipboard_vector.svg',
+      title: 'Promotes Productivity',
+      text:
+        'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.',
+    },
+  ];
+
+  const data2 = [
+    {
+      imageSrc: '/images/bee_barrels_home_1.png',
+      title: 'Environmentaly Friendly',
+      subTitle: 'An exciting solution for an invaluable natural resource.',
+      buttonText: 'LEARN MORE',
+    },
+    {
+      imageSrc: '/images/bee_home_2.png',
+      title: 'Durable Construction',
+      subTitle: 'An exciting solution for an invaluable natural resource.',
+      buttonText: 'JOIN US',
+    },
+  ];
   return (
     <Layout>
-      {/* <div style={{ display: `flex`, margin: `10rem` }}>
-        <section style={{ maxWidth: 415 }}>
-          <h1>Repopulate and Restore</h1>
-          <p style={{ fontSize: `24px`, lineHeight: `27.27px` }}>
-            Conserve an important natural resource with the award-winning Bee
-            Barrel system. Watch your bee colonies grow!
-          </p>
-          <button>TAKE A LOOK</button>
-        </section>
-        <img src="/images/beehive_graphic.svg" />
-        <img
-          src="/images/home_rectangle.svg"
-          style={{ position: `absolute`, top: 0, right: 0, zIndex: -1 }}
-        />
-      </div>
-      <section>
-        <main style={{ maxWidth: 995, margin: `auto`, display: `flex` }}>
-          <FeatureBox />
-          <FeatureBox />
-          <FeatureBox />
-        </main>
-        <button style={{ display: `block`, margin: `0 auto`, marginTop: 48 }}>
-          LEARN MORE
-        </button>
-      </section> */}
-
       <div className={styles.heroImages}>
         <img
           className={styles.img1}
@@ -56,33 +67,35 @@ export default function Home() {
           height={349}
         />
       </div>
-      <h2>Repopulate and Restore</h2>
-      <p>
-        Conserve an important natural resource with the award-winning Bee Barrel
-        system. Watch your bee colonies grow!
-      </p>
-      <button className="button">Take a look</button>
-
-      <section>
+      <section style={{ maxWidth: `220px` }}>
+        <h4>Repopulate and Restore</h4>
+        <p style={{ marginBottom: `24px` }}>
+          Conserve an important natural resource with the award-winning Bee
+          Barrel system. Watch your bee colonies grow!
+        </p>
+        <button className="button">Take a look</button>
+      </section>
+      <section
+        style={{ marginTop: 100, display: `flex`, flexDirection: `column` }}
+      >
         <div className="homeGrid">
-          <FeatureBox />
-          <FeatureBox />
-          <FeatureBox />
+          {data.map((info) => (
+            <FeatureBox vector={info.src} title={info.title} text={info.text} />
+          ))}
         </div>
-        <button className="button">LEARN MORE</button>
+        <button className="button" style={{ alignSelf: `center` }}>
+          LEARN MORE
+        </button>
       </section>
-      <section>
-        <img src="/images/bee_barrels_home_1.png" />
-        <h2>Introducing the Bee Barrel</h2>
-        <p>An exciting solution for an invaluable natural resource</p>
-        <button className="button">LEARN MORE</button>
-      </section>
-      <section>
-        <img src="/images/bee_home_2.png" />
-        <h2>Contribute</h2>
-        <p>An exciting solution for an invaluable natural resource</p>
-        <button className="button">LEARN MORE</button>
-      </section>
+
+      {data2.map((topic) => (
+        <MainTopic
+          imageSrc={topic.imageSrc}
+          title={topic.title}
+          subTitle={topic.subTitle}
+          buttonTexT={topic.buttonText}
+        />
+      ))}
       <section>
         <h3>CONNECT WITH US</h3>
         <div>
@@ -93,10 +106,6 @@ export default function Home() {
           <FaInstagram />
         </div>
       </section>
-      <footer style={{ background: `#959CB9` }}>
-        <p>&#169; 2020 BEESCIENTIFIC, LLC</p>
-        <p>ALL RIGHTS RESERVED.</p>
-      </footer>
     </Layout>
   );
 }
