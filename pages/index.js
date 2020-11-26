@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 import Layout from '../components/layout';
 import FeatureBox from '../components/featureBox';
 import MainTopic from '../components/mainTopics';
@@ -51,45 +50,49 @@ export default function Home() {
   ];
   return (
     <Layout>
-      <div className={styles.heroImages}>
+      <div className="grid grid-cols-2">
         <img
-          className={styles.img1}
+          className="self-center"
           src="/images/beehives_hero.png"
           alt="Picture of bee"
           width={124}
           height={130}
         />{' '}
         <img
-          className={styles.img2}
+          className=""
           src="/images/hero_bee.svg"
           alt="Picture of bee"
           width={351}
           height={349}
         />
       </div>
-      <section style={{ maxWidth: `220px` }}>
-        <h4>Repopulate and Restore</h4>
-        <p style={{ marginBottom: `24px` }}>
+      <section>
+        <h2 className="font-bold mb-4">Repopulate and Restore</h2>
+        <p className="mb-6">
           Conserve an important natural resource with the award-winning Bee
           Barrel system. Watch your bee colonies grow!
         </p>
-        <button className="button">Take a look</button>
-      </section>
-      <section
-        style={{ marginTop: 100, display: `flex`, flexDirection: `column` }}
-      >
-        <div className="homeGrid">
-          {data.map((info) => (
-            <FeatureBox vector={info.src} title={info.title} text={info.text} />
-          ))}
-        </div>
-        <button className="button" style={{ alignSelf: `center` }}>
-          LEARN MORE
+        <button className="bw-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10utton">
+          TAKE A LOOK
         </button>
       </section>
+      <section>
+        <div>
+          {data.map((info, index) => (
+            <FeatureBox
+              key={index}
+              vector={info.src}
+              title={info.title}
+              text={info.text}
+            />
+          ))}
+        </div>
+        <button>LEARN MORE</button>
+      </section>
 
-      {data2.map((topic) => (
+      {data2.map((topic, index) => (
         <MainTopic
+          key={index}
           imageSrc={topic.imageSrc}
           title={topic.title}
           subTitle={topic.subTitle}
@@ -97,7 +100,7 @@ export default function Home() {
         />
       ))}
       <section>
-        <h3>CONNECT WITH US</h3>
+        <h3> CONNECT WITH US</h3>
         <div>
           <FaFacebookF />
           <FaTwitter />

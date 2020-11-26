@@ -1,14 +1,16 @@
 import Link from 'next/link';
-import styles from '../styles/Home.module.css';
 
 export default function Header() {
   return (
-    <header className={styles.mainHeader}>
-      <a className={styles.brandLogo}>
-        <img src="/images/mobile_logo.png" />
-      </a>
-      <nav className={styles.mainNav}>
-        <ul>
+    <header className="flex">
+      <div className="flex flex-1 ml-4 mt-8">
+        <img className="md:hidden" src="/images/hamburger_menu.svg" />
+        <a className="ml-4">
+          <img src="/images/mobile_logo.png" />
+        </a>
+      </div>
+      <nav className="self-end">
+        <ul className="hidden md:flex flex-row space-x-8 mr-4">
           <li>
             <Link href="/">
               <a>HOME</a>
