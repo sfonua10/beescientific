@@ -40,12 +40,14 @@ export default function Home() {
 
   const data2 = [
     {
+      id: 0,
       imageSrc: '/images/bee_barrels_home_1.png',
       title: 'Introducing the Bee Barrel',
       subTitle: 'An exciting solution for an invaluable natural resource.',
       buttonText: 'LEARN MORE',
     },
     {
+      id: 1,
       imageSrc: '/images/bee_home_2.png',
       title: 'Contribute',
       subTitle: 'An exciting solution for an invaluable natural resource.',
@@ -62,7 +64,7 @@ export default function Home() {
   ];
   return (
     <Layout>
-      <div className="grid grid-cols-2 mx-12">
+      <div className="grid grid-cols-2 mx-12 md:mx-28">
         <img
           className="self-center"
           src="/images/beehive_group_shapes.svg"
@@ -76,45 +78,45 @@ export default function Home() {
           height={349}
         />
       </div>
-      <section className="mx-12">
+      <section className="mx-12 md:mx-28">
         <h2 className="font-bold mb-4">Repopulate and Restore</h2>
-        <p className="mb-6">
+        <p className="mb-6 max-w-xs">
           Conserve an important natural resource with the award-winning Bee
           Barrel system. Watch your bee colonies grow!
         </p>
         <Button text="TAKE A LOOK" />
       </section>
-      <section className="mx-12">
-        <div className="my-24">
-          {data.map((info) => (
-            <>
-              <FeatureBox
-                key={info.id}
-                id={info.id}
-                vector={info.src}
-                title={info.title}
-                text={info.text}
-              />
-              {info.id === 2 && (
-                <div style={{ margin: `0 auto`, width: `50%` }}>
-                  <Button text="LEARN MORE" />
-                </div>
-              )}
-            </>
-          ))}
-        </div>
+      <section className="mx-12 my-24 md:grid grid-cols-3 gap-x-20">
+        {data.map((info) => (
+          <>
+            <FeatureBox
+              key={info.id}
+              id={info.id}
+              vector={info.src}
+              title={info.title}
+              text={info.text}
+            />
+            {info.id === 2 && (
+              <div className="justify-self-center md:col-start-2">
+                <Button text="LEARN MORE" />
+              </div>
+            )}
+          </>
+        ))}
       </section>
-
-      {data2.map((topic, index) => (
-        <MainTopic
-          key={index}
-          imageSrc={topic.imageSrc}
-          title={topic.title}
-          subTitle={topic.subTitle}
-          buttonText={topic.buttonText}
-        />
-      ))}
-      <section className="mx-4 mb-16">
+      <section className="md:my-48">
+        {data2.map((topic) => (
+          <MainTopic
+            key={topic.id}
+            id={topic.id}
+            imageSrc={topic.imageSrc}
+            title={topic.title}
+            subTitle={topic.subTitle}
+            buttonText={topic.buttonText}
+          />
+        ))}
+      </section>
+      <section className="mx-4 mb-16 md:hidden">
         <h3 className="text-lg">CONNECT WITH US</h3>
         <div className="flex">
           {socialIcons.map((icon) => (
