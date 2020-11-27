@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import FeatureBox from '../components/featureBox';
 import MainTopic from '../components/mainTopics';
+import Button from '../components/button';
 
 import Image from 'next/image';
 import {
@@ -15,18 +16,21 @@ import {
 export default function Home() {
   const data = [
     {
+      id: 0,
       src: '/images/leaf_vector.svg',
       title: 'Environmentaly Friendly',
       text:
         'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.',
     },
     {
+      id: 1,
       src: '/images/tool_vector.svg',
       title: 'Durable Construction',
       text:
         'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id.',
     },
     {
+      id: 2,
       src: '/images/clipboard_vector.svg',
       title: 'Promotes Productivity',
       text:
@@ -37,26 +41,32 @@ export default function Home() {
   const data2 = [
     {
       imageSrc: '/images/bee_barrels_home_1.png',
-      title: 'Environmentaly Friendly',
+      title: 'Introducing the Bee Barrel',
       subTitle: 'An exciting solution for an invaluable natural resource.',
       buttonText: 'LEARN MORE',
     },
     {
       imageSrc: '/images/bee_home_2.png',
-      title: 'Durable Construction',
+      title: 'Contribute',
       subTitle: 'An exciting solution for an invaluable natural resource.',
       buttonText: 'JOIN US',
     },
   ];
+
+  const socialIcons = [
+    <FaFacebookF />,
+    <FaTwitter />,
+    <FaPinterestP />,
+    <FaYoutube />,
+    <FaInstagram />,
+  ];
   return (
     <Layout>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 mx-12">
         <img
           className="self-center"
-          src="/images/beehives_hero.png"
+          src="/images/beehive_group_shapes.svg"
           alt="Picture of bee"
-          width={124}
-          height={130}
         />{' '}
         <img
           className=""
@@ -66,28 +76,33 @@ export default function Home() {
           height={349}
         />
       </div>
-      <section>
+      <section className="mx-12">
         <h2 className="font-bold mb-4">Repopulate and Restore</h2>
         <p className="mb-6">
           Conserve an important natural resource with the award-winning Bee
           Barrel system. Watch your bee colonies grow!
         </p>
-        <button className="bw-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10utton">
-          TAKE A LOOK
-        </button>
+        <Button text="TAKE A LOOK" />
       </section>
-      <section>
-        <div>
-          {data.map((info, index) => (
-            <FeatureBox
-              key={index}
-              vector={info.src}
-              title={info.title}
-              text={info.text}
-            />
+      <section className="mx-12">
+        <div className="my-24">
+          {data.map((info) => (
+            <>
+              <FeatureBox
+                key={info.id}
+                id={info.id}
+                vector={info.src}
+                title={info.title}
+                text={info.text}
+              />
+              {info.id === 2 && (
+                <div style={{ margin: `0 auto`, width: `50%` }}>
+                  <Button text="LEARN MORE" />
+                </div>
+              )}
+            </>
           ))}
         </div>
-        <button>LEARN MORE</button>
       </section>
 
       {data2.map((topic, index) => (
@@ -96,17 +111,15 @@ export default function Home() {
           imageSrc={topic.imageSrc}
           title={topic.title}
           subTitle={topic.subTitle}
-          buttonTexT={topic.buttonText}
+          buttonText={topic.buttonText}
         />
       ))}
-      <section>
-        <h3> CONNECT WITH US</h3>
-        <div>
-          <FaFacebookF />
-          <FaTwitter />
-          <FaPinterestP />
-          <FaYoutube />
-          <FaInstagram />
+      <section className="mx-4 mb-16">
+        <h3 className="text-lg">CONNECT WITH US</h3>
+        <div className="flex">
+          {socialIcons.map((icon) => (
+            <a className="mr-6">{icon}</a>
+          ))}
         </div>
       </section>
     </Layout>

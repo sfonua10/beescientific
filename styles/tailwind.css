@@ -1,3 +1,14 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+
+html,
+nav > ul {
+  @apply text-darkish-blue;
+}
+
+/* Write your own custom component styles here */
+.btn-blue {
+  @apply py-2 px-4 border border-transparent shadow-sm text-sm font-medium text-white bg-darkish-blue hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+}
+
+@tailwind utilities;

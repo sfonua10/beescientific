@@ -1,12 +1,14 @@
+import Button from './button';
+
 const MainTopic = ({ imageSrc, title, subTitle, buttonText }) => {
   return (
     <section>
-      <img src={imageSrc} />
-      <h3 style={{ marginBottom: 22 }}>{title}</h3>
-      <p style={{ marginBottom: 24 }}>{subTitle}</p>
-      <button style={{ marginBottom: 74 }} className="button">
-        {buttonText}
-      </button>
+      <img className="mx-4 mb-7" src={imageSrc} />
+      <div className="mx-12 mb-20">
+        <h3 className="mb-6 font-bold">{title}</h3>
+        <p className="mb-6">{subTitle}</p>
+        <Button text={buttonText} />
+      </div>
     </section>
   );
 };
