@@ -15,7 +15,7 @@ export default function Header() {
     {
       id: 2,
       href: '/about',
-      text: 'ABOUT',
+      text: 'ABOUT US',
     },
   ];
 
@@ -23,12 +23,12 @@ export default function Header() {
     <header className="flex">
       <div className="flex flex-1 ml-4 mt-8">
         <img className="md:hidden" src="/images/hamburger_menu.svg" />
-        <a className="ml-4">
+        <a className="ml-4 lg:ml-12">
           <img src="/images/logo.svg" style={{ width: `100%` }} />
         </a>
       </div>
-      <nav className="self-end">
-        <ul className="hidden md:flex flex-row space-x-8 mr-4 text-darkish-blue lg:text-lg">
+      <nav className="self-end md:mb-3">
+        <ul className="hidden md:flex flex-row space-x-8 mr-4 text-darkish-blue lg:text-lg lg:mr-11">
           {linkData.map((link) => (
             <li key={link.id} className="lg:mr-5">
               <Link href={link.href}>

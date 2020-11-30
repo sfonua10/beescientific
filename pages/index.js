@@ -64,32 +64,40 @@ export default function Home() {
   ];
   return (
     <Layout>
-      <section className="grid grid-cols-3">
-        <div className="ml-36 self-center">
+      <section className="lg:grid grid-cols-12 h-96 py-12 my-24">
+        <div className="ml-36 col-span-4 justify-self-end">
           <h2 className="font-bold mb-4 lg:headings-gray-text">
             Repopulate and Restore
           </h2>
-          <p className="mb-6 max-w-xs">
+          <p className="mb-6 max-w-xs lg:text-2xl lg:text-heading-gray lg:max-w-sm">
             Conserve an important natural resource with the award-winning Bee
             Barrel system. Watch your bee colonies grow!
           </p>
           <Button text="TAKE A LOOK" />
         </div>
         <img
-          className="self-center justify-self-end"
+          className="col-span-3 col-start-5 justify-self-end"
           src="/images/beehive_group_shapes.svg"
           alt="Picture of bee"
+          // width="100%"
+          // height="100%"
         />{' '}
         <img
-          className=""
-          src="/images/hero_home_desktop.svg"
+          className="col-span-5"
+          src="/images/big_bee_desktop.jpg"
           alt="Picture of bee"
-          width={`100%`}
-          height={`100%`}
-          // style={{ position: `absolute`, right: 0, top: 0 }}
+          // width={`100%`}
+          // height={`100%`}
+          style={{
+            position: `absolute`,
+            right: 0,
+            top: 0,
+            zIndex: -1,
+            width: `37%`,
+          }}
         />
       </section>
-      <section className="mx-12 my-24 md:grid grid-cols-3 gap-x-20 lg:mx-60">
+      <section className="mx-12 my-24 md:grid grid-cols-3 gap-x-20 lg:mx-60 lg:my-40">
         {data.map((info) => (
           <>
             <FeatureBox
