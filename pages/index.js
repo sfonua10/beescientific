@@ -64,29 +64,32 @@ export default function Home() {
   ];
   return (
     <Layout>
-      <div className="grid grid-cols-2 mx-12 md:mx-28">
+      <section className="grid grid-cols-3">
+        <div className="ml-36 self-center">
+          <h2 className="font-bold mb-4 lg:headings-gray-text">
+            Repopulate and Restore
+          </h2>
+          <p className="mb-6 max-w-xs">
+            Conserve an important natural resource with the award-winning Bee
+            Barrel system. Watch your bee colonies grow!
+          </p>
+          <Button text="TAKE A LOOK" />
+        </div>
         <img
-          className="self-center"
+          className="self-center justify-self-end"
           src="/images/beehive_group_shapes.svg"
           alt="Picture of bee"
         />{' '}
         <img
           className=""
-          src="/images/hero_bee.svg"
+          src="/images/hero_home_desktop.svg"
           alt="Picture of bee"
-          width={351}
-          height={349}
+          width={`100%`}
+          height={`100%`}
+          // style={{ position: `absolute`, right: 0, top: 0 }}
         />
-      </div>
-      <section className="mx-12 md:mx-28">
-        <h2 className="font-bold mb-4">Repopulate and Restore</h2>
-        <p className="mb-6 max-w-xs">
-          Conserve an important natural resource with the award-winning Bee
-          Barrel system. Watch your bee colonies grow!
-        </p>
-        <Button text="TAKE A LOOK" />
       </section>
-      <section className="mx-12 my-24 md:grid grid-cols-3 gap-x-20">
+      <section className="mx-12 my-24 md:grid grid-cols-3 gap-x-20 lg:mx-60">
         {data.map((info) => (
           <>
             <FeatureBox
@@ -104,7 +107,7 @@ export default function Home() {
           </>
         ))}
       </section>
-      <section className="md:my-48">
+      <section className="md:my-48 lg:mx-60 lg:mt-44">
         {data2.map((topic) => (
           <MainTopic
             key={topic.id}
