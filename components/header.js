@@ -6,7 +6,7 @@ export default function Header() {
       <div className="flex flex-1 ml-4 mt-8">
         <img className="md:hidden" src="/images/hamburger_menu.svg" />
         <a className="ml-4">
-          <img src="/images/logo.svg" style={{ width: `100%` }} />
+          <img src="/images/logo.svg" className="stroke-1" />
         </a>
       </div>
       <nav className="self-end">
