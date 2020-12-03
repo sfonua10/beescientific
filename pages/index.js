@@ -13,7 +13,7 @@ import {
   FaInstagram,
 } from 'react-icons/fa';
 
-const HeroImage = styled.img`
+const HeroImageWrapper = styled.div`
   position: absolute;
   top: 20px;
   right: 0;
@@ -109,8 +109,15 @@ export default function Home() {
             strokeWidth="3"
           />
         </svg>
-
-        <HeroImage src="/images/hero_bee.svg" alt="Picture of bee" />
+        <HeroImageWrapper>
+          <Image
+            src="/images/hero_bee.svg"
+            alt="Picture of bee"
+            width={1000}
+            height={1000}
+            layout="responsive"
+          />
+        </HeroImageWrapper>
       </div>
       <section className="mx-12 md:mx-28">
         <h2 className="font-bold mb-4 md:text-2xl">Repopulate and Restore</h2>
