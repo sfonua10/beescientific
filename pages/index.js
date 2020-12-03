@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import FeatureBox from '../components/featureBox';
 import MainTopic from '../components/mainTopics';
 import Button from '../components/button';
-
+import styled from 'styled-components';
 import Image from 'next/image';
 import {
   FaFacebookF,
@@ -13,6 +13,17 @@ import {
   FaInstagram,
 } from 'react-icons/fa';
 
+const HeroImage = styled.img`
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: -1;
+
+  @media (min-width: 768px) {
+    top: -4rem;
+    width: 24rem;
+  }
+`;
 export default function Home() {
   const data = [
     {
@@ -61,11 +72,14 @@ export default function Home() {
     <FaYoutube />,
     <FaInstagram />,
   ];
+
+  let heroImageWidth = 15;
+  //23
   return (
     <Layout>
-      <div className="h-96 grid grid-cols-6 grid-rows-4">
+      <div className="h-96 grid grid-cols-6 grid-rows-6 md:mt-16">
         <svg
-          className="h-32 w-32 z-10 self-center row-start-2 col-start-2"
+          className="h-32 w-32 md:w-64 h-72 z-10 self-center row-start-3 col-start-2"
           viewBox="0 0 281 294"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -96,29 +110,17 @@ export default function Home() {
           />
         </svg>
 
-        <img
-          style={{
-            position: `absolute`,
-            top: `20px`,
-            width: `240px`,
-            right: 0,
-            zIndex: -1,
-          }}
-          src="/images/hero_bee.svg"
-          alt="Picture of bee"
-          width={351}
-          // height={349}
-        />
+        <HeroImage src="/images/hero_bee.svg" alt="Picture of bee" />
       </div>
       <section className="mx-12 md:mx-28">
-        <h2 className="font-bold mb-4">Repopulate and Restore</h2>
-        <p className="mb-6 max-w-xs">
+        <h2 className="font-bold mb-4 md:text-2xl">Repopulate and Restore</h2>
+        <p className="mb-6 max-w-xs md:text-lg">
           Conserve an important natural resource with the award-winning Bee
           Barrel system. Watch your bee colonies grow!
         </p>
         <Button text="TAKE A LOOK" />
       </section>
-      <section className="mx-12 my-24 md:grid grid-cols-3 gap-x-20">
+      <section className="mx-12 my-24 md:grid grid-cols-3 gap-x-20 md:mt-40">
         {data.map((info) => (
           <>
             <FeatureBox
@@ -151,8 +153,10 @@ export default function Home() {
       <section className="mx-4 mb-4 md:hidden">
         <h3 className="text-lg">CONNECT WITH US</h3>
         <div className="flex">
-          {socialIcons.map((icon) => (
-            <a className="mr-6">{icon}</a>
+          {socialIcons.map((icon, index) => (
+            <a className="mr-6" key={index}>
+              {icon}
+            </a>
           ))}
         </div>
       </section>
