@@ -18,23 +18,22 @@ export default function Home() {
     {
       id: 0,
       src: '/images/leaf_vector.svg',
-      title: 'Environmentaly Friendly',
-      text:
-        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.',
+      title: 'Client Management',
+      text: 'Bee Barrels provide insulation and stable hive temperatures.',
     },
     {
       id: 1,
       src: '/images/tool_vector.svg',
       title: 'Durable Construction',
       text:
-        'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id.',
+        'Bee Barrels eliminate hive damage and minimize stress to your bees.',
     },
     {
       id: 2,
       src: '/images/clipboard_vector.svg',
       title: 'Promotes Productivity',
       text:
-        'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.',
+        'Bee Barrels promote productivity, yielding better results from colonies.',
     },
   ];
 
@@ -44,13 +43,13 @@ export default function Home() {
       imageSrc: '/images/bee_barrels_home_1.png',
       title: 'Introducing the Bee Barrel',
       subTitle: 'An exciting solution for an invaluable natural resource.',
-      buttonText: 'LEARN MORE',
+      buttonText: 'SEE MORE',
     },
     {
       id: 1,
       imageSrc: '/images/bee_home_2.png',
-      title: 'Contribute',
-      subTitle: 'An exciting solution for an invaluable natural resource.',
+      title: 'Contribute or Invest',
+      subTitle: 'Learn more about our business and become part of the team!',
       buttonText: 'JOIN US',
     },
   ];
@@ -64,18 +63,51 @@ export default function Home() {
   ];
   return (
     <Layout>
-      <div className="grid grid-cols-2 mx-12 md:mx-28">
+      <div className="h-96 grid grid-cols-6 grid-rows-4">
+        <svg
+          className="h-32 w-32 z-10 self-center row-start-2 col-start-2"
+          viewBox="0 0 281 294"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M24.5 125.691L120.578 72.7034L221.5 125.712V216.991L120.578 269.302L24.5 217.011V125.691Z"
+            stroke="#2E3E77"
+            strokeOpacity="0.77"
+            strokeWidth="3"
+          />
+          <path
+            d="M1.5 221.788L48.7978 195.703L98.5 221.809V266.539L48.7975 292.302L1.5 266.56V221.788Z"
+            stroke="#2E3E77"
+            strokeOpacity="0.47"
+            strokeWidth="3"
+          />
+          <path
+            d="M182.5 106.788L229.798 80.7034L279.5 106.809V151.539L229.797 177.302L182.5 151.56V106.788Z"
+            stroke="#2E3E77"
+            strokeOpacity="0.47"
+            strokeWidth="3"
+          />
+          <path
+            d="M90.5 39.0875L158.286 1.70343L229.5 39.1082V103.389L158.285 140.302L90.5 103.409V39.0875Z"
+            stroke="#2E3E77"
+            strokeOpacity="0.47"
+            strokeWidth="3"
+          />
+        </svg>
+
         <img
-          className="self-center"
-          src="/images/beehive_group_shapes.svg"
-          alt="Picture of bee"
-        />{' '}
-        <img
-          className=""
+          style={{
+            position: `absolute`,
+            top: `20px`,
+            width: `240px`,
+            right: 0,
+            zIndex: -1,
+          }}
           src="/images/hero_bee.svg"
           alt="Picture of bee"
           width={351}
-          height={349}
+          // height={349}
         />
       </div>
       <section className="mx-12 md:mx-28">
@@ -116,7 +148,7 @@ export default function Home() {
           />
         ))}
       </section>
-      <section className="mx-4 mb-16 md:hidden">
+      <section className="mx-4 mb-4 md:hidden">
         <h3 className="text-lg">CONNECT WITH US</h3>
         <div className="flex">
           {socialIcons.map((icon) => (
