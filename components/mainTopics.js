@@ -9,7 +9,7 @@ const MainTopic = ({ imageSrc, title, subTitle, buttonText, id }) => {
           src={imageSrc}
           width={343}
           height={330}
-          layout="responsive"
+          layout="fixed"
           loading="lazy"
         />
       </div>

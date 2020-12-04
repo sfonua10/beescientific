@@ -13,22 +13,27 @@ import {
   FaInstagram,
 } from 'react-icons/fa';
 
-const HeroImageWrapper = styled.div`
-  position: absolute;
-  top: 20px;
-  right: 0;
-  z-index: -1;
+// const HeroImageWrapper = styled.div`
+//   position: absolute;
+//   top: 20px;
+//   right: 0;
+//   z-index: -1;
 
-  @media (min-width: 768px) {
-    top: -4rem;
-    width: 24rem;
-  }
-`;
+//   @media (min-width: 768px) {
+//     top: -4rem;
+//     width: 36rem;
+//   }
+
+//   @media (min-width: 1024px) {
+//     top: -4rem;
+//     width: 47rem;
+//   }
+// `;
 export default function Home() {
   const data = [
     {
       id: 0,
-      src: '/images/leaf_vector.svg',
+      src: '/images/thermometer-half-solid.svg',
       title: 'Client Management',
       text: 'Bee Barrels provide insulation and stable hive temperatures.',
     },
@@ -77,9 +82,17 @@ export default function Home() {
   //23
   return (
     <Layout>
-      <div className="h-96 grid grid-cols-6 grid-rows-6 md:mt-16">
+      <div className=" h-96 grid grid-cols-12 grid-rows-6 md:mt-16">
+        <section className="hidden mx-12 md:mx-28 xl:block xl:col-span-2 justify-self-end">
+          <h2 className="font-bold mb-4 md:text-2xl">Repopulate and Restore</h2>
+          <p className="mb-6 max-w-xs md:text-lg">
+            Conserve an important natural resource with the award-winning Bee
+            Barrel system. Watch your bee colonies grow!
+          </p>
+          <Button text="TAKE A LOOK" />
+        </section>
         <svg
-          className="h-32 w-32 md:w-64 h-72 z-10 self-center row-start-3 col-start-2"
+          className="h-32 w-32 md:w-64 h-72 z-10 self-center justify-self-center row-start-3 col-start-4 xl:col-start-3"
           viewBox="0 0 281 294"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -109,17 +122,17 @@ export default function Home() {
             strokeWidth="3"
           />
         </svg>
-        <HeroImageWrapper>
+        <div className="absolute top-7 right-0 -z-10">
           <Image
-            src="/images/hero_bee.svg"
+            src="/images/mobile_hero_bee.svg"
             alt="Picture of bee"
-            width={1000}
-            height={1000}
-            layout="responsive"
+            width={250}
+            height={370}
+            layout="intrinsic"
           />
-        </HeroImageWrapper>
+        </div>
       </div>
-      <section className="mx-12 md:mx-28">
+      <section className="mx-12 md:mx-28 xl:hidden">
         <h2 className="font-bold mb-4 md:text-2xl">Repopulate and Restore</h2>
         <p className="mb-6 max-w-xs md:text-lg">
           Conserve an important natural resource with the award-winning Bee
@@ -157,8 +170,8 @@ export default function Home() {
           />
         ))}
       </section>
-      <section className="mx-4 mb-4 md:hidden">
-        <h3 className="text-lg">CONNECT WITH US</h3>
+      <section className="mx-4 mb-5 md:hidden">
+        <h3 className="mb-1 text-lg">CONNECT WITH US</h3>
         <div className="flex">
           {socialIcons.map((icon, index) => (
             <a className="mr-6" key={index}>
