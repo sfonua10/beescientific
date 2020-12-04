@@ -83,7 +83,7 @@ export default function Home() {
   return (
     <Layout>
       <div className=" h-96 grid grid-cols-12 grid-rows-6 md:mt-16">
-        <section className="hidden mx-12 md:mx-28 xl:block xl:col-span-2 justify-self-end">
+        <section className="hidden mx-12 md:mx-28 lg:block lg:col-start-2 lg:col-span-4 lg:mx-0 lg:row-start-2">
           <h2 className="font-bold mb-4 md:text-2xl">Repopulate and Restore</h2>
           <p className="mb-6 max-w-xs md:text-lg">
             Conserve an important natural resource with the award-winning Bee
@@ -92,7 +92,7 @@ export default function Home() {
           <Button text="TAKE A LOOK" />
         </section>
         <svg
-          className="h-32 w-32 md:w-64 h-72 z-10 self-center justify-self-center row-start-3 col-start-4 xl:col-start-3"
+          className="h-32 w-32 md:w-64 h-72 z-10 self-center justify-self-center row-start-3 col-start-4 md:col-start-5 md:col lg:col-start-6"
           viewBox="0 0 281 294"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,8 @@ export default function Home() {
             strokeWidth="3"
           />
         </svg>
-        <div className="absolute top-7 right-0 -z-10">
+        {/* Mobile Image */}
+        {/* <div className="absolute top-7 right-0 -z-10">
           <Image
             src="/images/mobile_hero_bee.svg"
             alt="Picture of bee"
@@ -130,9 +131,31 @@ export default function Home() {
             height={370}
             layout="intrinsic"
           />
+        </div> */}
+
+        {/* Tablet Image */}
+        {/* <div className="absolute -top-7 right-0 -z-10">
+          <Image
+            src="/images/mobile_hero_bee.svg"
+            alt="Picture of bee"
+            width={450}
+            height={550}
+            layout="intrinsic"
+          />
+        </div> */}
+
+        {/* Large 1024px */}
+        <div className="absolute -top-7 -right-10 -z-10">
+          <Image
+            src="/images/mobile_hero_bee.svg"
+            alt="Picture of bee"
+            width={800}
+            height={700}
+            layout="intrinsic"
+          />
         </div>
       </div>
-      <section className="mx-12 md:mx-28 xl:hidden">
+      <section className="mx-12 md:mx-28 lg:hidden">
         <h2 className="font-bold mb-4 md:text-2xl">Repopulate and Restore</h2>
         <p className="mb-6 max-w-xs md:text-lg">
           Conserve an important natural resource with the award-winning Bee
