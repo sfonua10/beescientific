@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         'blue-gray': '#959CB9',
         'darkish-blue': '#2E3E77'
+      },
+      zIndex: {
+        '-10': '-10',
       }
     },
   },

@@ -10,7 +10,7 @@ export default function Header() {
         </a>
       </div>
       <nav className="self-end">
-        <ul className="hidden md:flex flex-row space-x-8 mr-4 text-darkish-blue">
+        <ul className="hidden md:flex flex-row space-x-8 md:space-x-14 mr-4 md: mr-6 text-darkish-blue">
           <li>
             <Link href="/">
               <a>HOME</a>
