@@ -181,7 +181,7 @@ export default function Home() {
           </>
         ))}
       </section>
-      <section className="sm2:ml-4 md:my-48">
+      <section className="sm2:ml-4 md:mt-40 md:mb-20">
         {data2.map((topic) => (
           <MainTopic
             key={topic.id}
