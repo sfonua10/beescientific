@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Header() {
+  console.log(useRouter().pathname);
   return (
     <header className="flex">
       <div className="flex flex-1 ml-4 mt-8">
@@ -13,17 +15,35 @@ export default function Header() {
         <ul className="hidden md:flex flex-row space-x-8 md:space-x-14 mr-4 md: mr-6 text-darkish-blue">
           <li>
             <Link href="/">
-              <a>HOME</a>
+              <a
+                className={`${
+                  useRouter().pathname === '/' ? 'font-black' : ''
+                }`}
+              >
+                HOME
+              </a>
             </Link>
           </li>
           <li>
             <Link href="/beeBarrel">
-              <a>BEE BARREL</a>
+              <a
+                className={`${
+                  useRouter().pathname === '/beeBarrel' ? 'font-black' : ''
+                }`}
+              >
+                BEE BARREL
+              </a>
             </Link>
           </li>
           <li>
             <Link href="/about">
-              <a>ABOUT US</a>
+              <a
+                className={`${
+                  useRouter().pathname === '/about' ? 'font-black' : ''
+                }`}
+              >
+                ABOUT US
+              </a>
             </Link>
           </li>
           {/* <li>
