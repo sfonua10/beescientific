@@ -6,9 +6,6 @@ module.exports = {
       sans: ['Avenir', 'sans-serif'],
       serif: ['Avenir', 'serif'],
     },
-    screens: {
-      'sm2': '411px'
-    },
     extend: {
       colors: {
         'blue-gray': '#959CB9',
@@ -16,7 +13,13 @@ module.exports = {
       },
       zIndex: {
         '-10': '-10',
-      }
+      },
+      screens: {
+        'sm2': '411px'
+      },
+      maxWidth: {
+        'hp': '15rem'
+       }
     },
   },
   variants: {
