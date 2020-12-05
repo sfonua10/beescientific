@@ -123,7 +123,7 @@ export default function Home() {
           />
         </svg>
         {/* Mobile Image */}
-        {/* <div className="absolute top-7 right-0 -z-10">
+        <div className="absolute top-7 right-0 -z-10 md:hidden">
           <Image
             src="/images/mobile_hero_bee.svg"
             alt="Picture of bee"
@@ -131,10 +131,10 @@ export default function Home() {
             height={370}
             layout="intrinsic"
           />
-        </div> */}
+        </div>
 
         {/* Tablet Image */}
-        {/* <div className="absolute -top-7 right-0 -z-10">
+        <div className="hidden absolute -top-7 right-0 -z-10 md:block">
           <Image
             src="/images/mobile_hero_bee.svg"
             alt="Picture of bee"
@@ -142,10 +142,10 @@ export default function Home() {
             height={550}
             layout="intrinsic"
           />
-        </div> */}
+        </div>
 
         {/* Large 1024px */}
-        <div className="absolute -top-7 -right-10 -z-10">
+        <div className="hidden absolute -top-7 -right-10 -z-10 lg:block">
           <Image
             src="/images/mobile_hero_bee.svg"
             alt="Picture of bee"
@@ -181,7 +181,7 @@ export default function Home() {
           </>
         ))}
       </section>
-      <section className="md:my-48">
+      <section className="sm2:ml-4 md:my-48">
         {data2.map((topic) => (
           <MainTopic
             key={topic.id}

@@ -6,6 +6,9 @@ module.exports = {
       sans: ['Avenir', 'sans-serif'],
       serif: ['Avenir', 'serif'],
     },
+    screens: {
+      'sm2': '411px'
+    },
     extend: {
       colors: {
         'blue-gray': '#959CB9',
