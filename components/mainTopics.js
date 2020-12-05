@@ -8,7 +8,6 @@ const MainTopic = ({ imageSrc, title, subTitle, buttonText, id }) => {
         <Image
           src={imageSrc}
           width={343}
-          // width={300} this size needed for iphone5se
           height={330}
           layout="fixed"
           loading="lazy"
