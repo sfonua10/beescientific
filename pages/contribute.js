@@ -1,4 +1,6 @@
+import Layout from '../components/layout';
+
 const Contribute = () => {
-  return <div>Contribute</div>;
+  return <Layout>Contribute</Layout>;
 };
 export default Contribute;

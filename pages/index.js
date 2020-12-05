@@ -198,7 +198,7 @@ export default function Home() {
         <h3 className="mb-1 text-lg">CONNECT WITH US</h3>
         <div className="flex">
           {socialIcons.map((icon, index) => (
-            <a className="mr-6" key={index}>
+            <a className="mr-6" key={index + 1}>
               {icon}
             </a>
           ))}

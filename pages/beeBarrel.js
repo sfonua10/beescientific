@@ -1,4 +1,6 @@
+import Layout from '../components/layout';
+
 const BeeBarrel = () => {
-  return <div>BeeBarrel</div>;
+  return <Layout>BeeBarrel</Layout>;
 };
 export default BeeBarrel;
