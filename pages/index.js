@@ -78,12 +78,10 @@ export default function Home() {
     <FaInstagram />,
   ];
 
-  let heroImageWidth = 15;
-  //23
   return (
     <Layout>
       <div className=" h-96 grid grid-cols-12 grid-rows-6 md:mt-16">
-        <section className="hidden mx-12 md:mx-28 lg:block lg:col-start-2 lg:col-span-4 lg:mx-0 lg:row-start-2">
+        <section className="hidden mx-12 md:mx-28 xl:block lg:col-start-2 lg:col-span-4 lg:mx-0 lg:row-start-2">
           <h2 className="font-bold mb-4 md:text-2xl">Repopulate and Restore</h2>
           <p className="mb-6 max-w-xs md:text-lg">
             Conserve an important natural resource with the award-winning Bee
@@ -92,7 +90,7 @@ export default function Home() {
           <Button text="TAKE A LOOK" />
         </section>
         <svg
-          className="h-32 w-32 md:w-64 h-72 z-10 self-center justify-self-center row-start-3 col-start-4 md:col-start-5 md:col lg:col-start-6"
+          className="h-32 w-32 md:w-64 h-72 z-10 self-center justify-self-center row-start-3 col-start-4 md:col-start-5 md:col lg:col-start-4 xl:col-start-6"
           viewBox="0 0 281 294"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +132,7 @@ export default function Home() {
         </div>
 
         {/* Tablet Image */}
-        <div className="hidden absolute -top-7 right-0 -z-10 md:block">
+        <div className="hidden absolute -top-7 right-0 -z-10 md:block lg:hidden">
           <Image
             src="/images/mobile_hero_bee.svg"
             alt="Picture of bee"
@@ -155,7 +153,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <section className="mx-12 md:mx-28 lg:hidden">
+      <section className="mx-12 md:mx-28 md:ml-48 xl:hidden">
         <h2 className="font-bold mb-4 md:text-2xl">Repopulate and Restore</h2>
         <p className="mb-6 max-w-xs md:text-lg">
           Conserve an important natural resource with the award-winning Bee
@@ -163,7 +161,7 @@ export default function Home() {
         </p>
         <Button text="TAKE A LOOK" />
       </section>
-      <section className="mx-12 my-24 md:grid grid-cols-3 gap-x-20 md:mt-40">
+      <section className="flex flex-col mx-12 my-24 md:grid grid-cols-3 gap-x-20 md:mt-40 lg:m-36 xl:mt-60">
         {data.map((info) => (
           <>
             <FeatureBox
@@ -174,14 +172,17 @@ export default function Home() {
               text={info.text}
             />
             {info.id === 2 && (
-              <div className="justify-self-center md:col-start-2">
+              <div className="self-center md:col-start-2 md:text-center">
                 <Button text="LEARN MORE" />
               </div>
             )}
           </>
         ))}
       </section>
-      <section className="sm2:ml-4 md:mt-40 md:mb-20">
+      <section
+        className="sm2:ml-4 md:mt-40 md:mb-20 md:max-w-3xl"
+        style={{ margin: `0 auto` }}
+      >
         {data2.map((topic) => (
           <MainTopic
             key={topic.id}

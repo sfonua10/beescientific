@@ -3,11 +3,12 @@ import Image from 'next/image';
 
 const MainTopic = ({ imageSrc, title, subTitle, buttonText, id }) => {
   return (
-    <div className="md:grid grid-cols-2">
-      <div className={`mx-4 mb-7 ${id === 1 && 'order-1'}`}>
+    <div className="flex flex-col items-center md:grid md:grid-cols-2">
+      <div className={`mx-4 mb-7 ${id === 1 ? 'md:order-1' : 'order-none'}`}>
         <Image
           src={imageSrc}
           width={343}
+          // width={300} this size needed for iphone5se
           height={330}
           layout="fixed"
           loading="lazy"
@@ -16,7 +17,7 @@ const MainTopic = ({ imageSrc, title, subTitle, buttonText, id }) => {
       <div className="mx-12 mb-20 self-center md:mx-0 md:self-start">
         {id === 1 ? (
           <svg
-            className="ml-32"
+            className="hidden md:block ml-32"
             width="185"
             height="179"
             fill="none"

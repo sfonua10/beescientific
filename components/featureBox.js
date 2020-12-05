@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const FeatureBox = ({ vector, title, text, id }) => {
   return (
     <div style={{ minWidth: `10rem` }} className="grid">
@@ -8,7 +10,9 @@ const FeatureBox = ({ vector, title, text, id }) => {
         height={40}
       />
       <h1 className="mb-4 font-bold justify-self-center">{title}</h1>
-      <p className={`${id === 2 ? 'mb-6' : 'mb-14'} text-sm pl-3`}>{text}</p>
+      <p className={`${id === 2 ? 'mb-6' : 'mb-14'} text-sm pl-3 text-center`}>
+        {text}
+      </p>
     </div>
   );
 };
