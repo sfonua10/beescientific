@@ -143,7 +143,7 @@ export default function Home() {
         </div>
 
         {/* Large 1024px */}
-        <div className="hidden absolute -top-7 -right-10 -z-10 lg:block">
+        <div className="hidden absolute -top-7 right-2 -z-10 lg:block">
           <Image
             src="/images/mobile_hero_bee.svg"
             alt="Picture of bee"
