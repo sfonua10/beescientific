@@ -8,6 +8,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        'bb-heading': '#414141',
+        'light-gray': '#A7A7A7',
         'blue-gray': '#959CB9',
         'darkish-blue': '#2E3E77'
       },
