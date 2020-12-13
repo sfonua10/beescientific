@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const Benefits = ({ title, subtitle, text, text2, images, imagesText }) => {
   return (
     <section>

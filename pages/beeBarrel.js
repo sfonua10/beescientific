@@ -10,36 +10,44 @@ import SocialIcons from '../components/socialIcons';
 const BeeBarrel = () => {
   return (
     <Layout>
-      <div className="mx-4">
-        <div className="flex justify-center mt-8">
+      <div className="mx-4 md:mx-28">
+        <div
+          className="flex justify-center mt-8 relative"
+          style={{ paddingTop: `56.25%` }}
+        >
           <ReactPlayer
+            style={{ position: `absolute`, top: 0, left: 0 }}
             url="https://www.youtube.com/watch?v=4FKwSIw-rSc"
-            width={343}
-            height={193}
-            light=""
+            width="100%"
+            height="100%"
           />
         </div>
         <h1 className="text-2xl	text-dark-black font-black pt-8 pb-4">
           Bee Barrels
         </h1>
-        <p className="text-sm pb-6">
-          The Bee Barrel is a new beehive designed to improve the environment
-          for the bees and performance for the beekeeper. It maintains
-          traditional beekeeping techniques while streamlining the management of
-          bee colonies, reducing loss, and promoting better colony health. The
-          Bee Barrel’s modern design benefits the bees, benefits the beekeepers,
-          and also benefits the scientific community.
-        </p>
-        <div className="flex flex-col text-white bg-blue-gray text-">
-          <h1 className="text-2xl font-extrabold pt-10 text-center pb-4">
-            THE DESIGN PROVIDES:
-          </h1>
-          <ol className="px-16 pb-10 text-sm">
-            <li>1. Benefits for the bees.</li>
-            <li>2. Benefits for the beekeepers.</li>
-            <li>3. Benefits for the scientific community.</li>
-          </ol>
-        </div>
+        <section className="md:flex">
+          <p className="text-sm pb-6">
+            The Bee Barrel is a new beehive designed to improve the environment
+            for the bees and performance for the beekeeper. It maintains
+            traditional beekeeping techniques while streamlining the management
+            of bee colonies, reducing loss, and promoting better colony health.
+            The Bee Barrel’s modern design benefits the bees, benefits the
+            beekeepers, and also benefits the scientific community.
+          </p>
+          <div className="flex flex-col text-white bg-blue-gray">
+            <h1 className="text-2xl font-extrabold pt-10 text-center pb-4 md:text-base">
+              THE DESIGN PROVIDES:
+            </h1>
+            <ol
+              className="px-16 pb-10 text-sm"
+              style={{ minWidth: `205`, alignSelf: `center` }}
+            >
+              <li>1. Benefits for the bees.</li>
+              <li>2. Benefits for the beekeepers.</li>
+              <li>3. Benefits for the scientific community.</li>
+            </ol>
+          </div>
+        </section>
         <section>
           <h1 className="text-2xl py-8 font-extrabold">
             So, what are the benefits?
@@ -54,7 +62,7 @@ const BeeBarrel = () => {
             during seasonal changes and also helps regulate the temperature and
             humidity inside the hive cavity."
             images={[
-              'images/honey-bees-comg.jpg',
+              'images/hones-bees-comb.png',
               'images/unique-hive-barrel.jpg',
             ]}
             imagesText={[
