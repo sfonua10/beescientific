@@ -9,13 +9,13 @@ const Benefits = ({ title, subtitle, text, text2, images, imagesText }) => {
       {images ? (
         <div className="flex space-x-4 pb-8">
           <div>
-            <img src={`${images[0]}`} />
+            <img className="pb-2" src={`${images[0]}`} />
             <h5 className="text-xs" style={{ maxWidth: `10rem` }}>
               {imagesText[0]}
             </h5>
           </div>
           <div>
-            <img src={`${images[1]}`} />
+            <img className="pb-2" src={`${images[1]}`} />
             <h5 className="text-xs" style={{ maxWidth: `10rem` }}>
               {imagesText[1]}
             </h5>

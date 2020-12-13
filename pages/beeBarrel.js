@@ -3,6 +3,9 @@ import ReactPlayer from 'react-player/youtube';
 import Image from 'next/image';
 import Button from '../components/button';
 import Benefits from '../components/beeBarrel/benefits';
+import HowItWorks from '../components/beeBarrel/howItWorks';
+import ViewMore from '../components/viewMore';
+import SocialIcons from '../components/socialIcons';
 
 const BeeBarrel = () => {
   return (
@@ -16,10 +19,10 @@ const BeeBarrel = () => {
             light=""
           />
         </div>
-        <h1 className="text-2xl	text-bb-heading font-black pt-8 pb-4">
+        <h1 className="text-2xl	text-dark-black font-black pt-8 pb-4">
           Bee Barrels
         </h1>
-        <p className="text-sm">
+        <p className="text-sm pb-6">
           The Bee Barrel is a new beehive designed to improve the environment
           for the bees and performance for the beekeeper. It maintains
           traditional beekeeping techniques while streamlining the management of
@@ -27,11 +30,11 @@ const BeeBarrel = () => {
           Bee Barrel’s modern design benefits the bees, benefits the beekeepers,
           and also benefits the scientific community.
         </p>
-        <div className="flex flex-col text-white bg-blue-gray">
-          <h1 className="text-2xl font-extrabold pt-10">
+        <div className="flex flex-col text-white bg-blue-gray text-">
+          <h1 className="text-2xl font-extrabold pt-10 text-center pb-4">
             THE DESIGN PROVIDES:
           </h1>
-          <ol>
+          <ol className="px-16 pb-10 text-sm">
             <li>1. Benefits for the bees.</li>
             <li>2. Benefits for the beekeepers.</li>
             <li>3. Benefits for the scientific community.</li>
@@ -94,38 +97,30 @@ const BeeBarrel = () => {
             minimal effort for maximum benefit."
           />
         </section>
-        <section>
-          <h1>How It Works</h1>
-          <Image
-            src="/images/how-it-works-1.jpg"
-            alt="how it works video"
-            width={359}
-            height={215}
+        <section className="pb-16">
+          <h1 className="text-2xl font-black pb-4">How It Works</h1>
+          <HowItWorks
+            imgSrc="/images/how-it-works-1.jpg"
+            subTitle="Adjustable Bee Gate"
+            text="See how easy it is to adjust the bee gate to the size you need. The
+        entrance is narrow in order to give guard bees something to protect. You
+        can adjust the gate from fully open to fully closed, which might be used
+        when transporting the hive."
           />
-          <h3>Adjustable Bee Gate</h3>
-          <p>
-            See how easy it is to adjust the bee gate to the size you need. The
-            entrance is narrow in order to give guard bees something to protect.
-            You can adjust the gate from fully open to fully closed, which might
-            be used when transporting the hive.
-          </p>
-          <Image
-            src="/images/how-it-works-2.jpg"
-            alt="how it works video"
-            width={359}
-            height={215}
-          />
-          <h3>Bee Barrel Feeder</h3>
-          <p>
-            The built-in feeder is encased in the very back ring on the barrel,
+          <HowItWorks
+            imgSrc="/images/how-it-works-2.jpg"
+            subTitle="Bee Barrel Feeder"
+            text="The built-in feeder is encased in the very back ring on the barrel,
             providing basic access for the bees to their food. The feeder is
             easy to fill with whatever you’d like to give your bees, and they
-            can access it from the bottom of the feeder, inside the hive.
-          </p>
+            can access it from the bottom of the feeder, inside the hive."
+          />
         </section>
-        <section>
-          Want to view more videos?
-          <Button text="CLICK HERE" />
+        <section className="pb-20">
+          <ViewMore />
+        </section>
+        <section className="pb-4">
+          <SocialIcons />
         </section>
       </div>
     </Layout>
