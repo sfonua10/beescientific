@@ -17,6 +17,6 @@
     "react-icons": "^3.11.0",
     "react-player": "^2.7.0",
     "styled-components": "^5.2.1",
-    "tailwindcss": "^2.0.1"
+    "tailwindcss": "^2.0.2"
   }
 }

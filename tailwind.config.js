@@ -20,8 +20,12 @@ module.exports = {
         'sm2': '411px'
       },
       maxWidth: {
-        'hp': '15rem'
-       }
+        'hp': '15rem',
+        'bbp': '257px',
+      },
+      maxHeight: {
+        'bbd': '209px'
+      }
     },
   },
   variants: {

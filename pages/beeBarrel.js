@@ -25,8 +25,8 @@ const BeeBarrel = () => {
         <h1 className="text-2xl	text-dark-black font-black pt-8 pb-4">
           Bee Barrels
         </h1>
-        <section className="md:flex">
-          <p className="text-sm pb-6">
+        <section className="md:flex md:gap-x-5 md:mb-14">
+          <p className="text-sm pb-6 md:max-w-bbp md:pb-0">
             The Bee Barrel is a new beehive designed to improve the environment
             for the bees and performance for the beekeeper. It maintains
             traditional beekeeping techniques while streamlining the management
@@ -34,12 +34,12 @@ const BeeBarrel = () => {
             The Bee Barrel’s modern design benefits the bees, benefits the
             beekeepers, and also benefits the scientific community.
           </p>
-          <div className="flex flex-col text-white bg-blue-gray">
-            <h1 className="text-2xl font-extrabold pt-10 text-center pb-4 md:text-base">
+          <div className="flex flex-col text-white bg-blue-gray md:py-10 md:px-6">
+            <h1 className="text-2xl font-extrabold pt-10 text-center pb-4 md:text-base md:pb-6 md:pt-0">
               THE DESIGN PROVIDES:
             </h1>
             <ol
-              className="px-16 pb-10 text-sm"
+              className="px-16 pb-10 text-sm md:px-0 md:pb-0"
               style={{ minWidth: `205`, alignSelf: `center` }}
             >
               <li>1. Benefits for the bees.</li>
@@ -49,7 +49,7 @@ const BeeBarrel = () => {
           </div>
         </section>
         <section>
-          <h1 className="text-2xl py-8 font-extrabold">
+          <h1 className="text-2xl py-8 font-extrabold md:text-3xl md:mb-12 md:py-0">
             So, what are the benefits?
           </h1>
           <Benefits
@@ -127,7 +127,7 @@ const BeeBarrel = () => {
         <section className="pb-20">
           <ViewMore />
         </section>
-        <section className="pb-4">
+        <section className="pb-4 md:hidden">
           <SocialIcons />
         </section>
       </div>

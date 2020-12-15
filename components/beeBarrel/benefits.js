@@ -3,8 +3,10 @@ import Image from 'next/image';
 const Benefits = ({ title, subtitle, text, text2, images, imagesText }) => {
   return (
     <section>
-      <h3 className="text-lg font-extrabold pb-2">{title}</h3>
-      <h6 className="text-light-gray text-sm font-medium pb-4">{subtitle}</h6>
+      <h3 className="text-lg font-extrabold pb-2 md:text-2xl">{title}</h3>
+      <h6 className="text-light-gray text-sm font-medium pb-4 md:text-lg">
+        {subtitle}
+      </h6>
       <p className="text-sm pb-6">{text}</p>
       {text2 ? <p className="text-sm pb-6">{text2}</p> : <></>}
 
