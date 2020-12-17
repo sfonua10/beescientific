@@ -5,13 +5,7 @@ import MainTopic from '../components/mainTopics';
 import Button from '../components/button';
 import styled from 'styled-components';
 import Image from 'next/image';
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaPinterestP,
-  FaYoutube,
-  FaInstagram,
-} from 'react-icons/fa';
+import SocialIcons from '../components/socialIcons';
 
 // const HeroImageWrapper = styled.div`
 //   position: absolute;
@@ -68,14 +62,6 @@ export default function Home() {
       subTitle: 'Learn more about our business and become part of the team!',
       buttonText: 'JOIN US',
     },
-  ];
-
-  const socialIcons = [
-    <FaFacebookF />,
-    <FaTwitter />,
-    <FaPinterestP />,
-    <FaYoutube />,
-    <FaInstagram />,
   ];
 
   return (
@@ -143,7 +129,7 @@ export default function Home() {
         </div>
 
         {/* Large 1024px */}
-        <div className="hidden absolute -top-7 -right-10 -z-10 lg:block">
+        <div className="hidden absolute -top-7 right-2 -z-10 lg:block">
           <Image
             src="/images/mobile_hero_bee.svg"
             alt="Picture of bee"
@@ -195,14 +181,7 @@ export default function Home() {
         ))}
       </section>
       <section className="mx-4 mb-5 md:hidden">
-        <h3 className="mb-1 text-lg">CONNECT WITH US</h3>
-        <div className="flex">
-          {socialIcons.map((icon, index) => (
-            <a className="mr-6" key={index + 1}>
-              {icon}
-            </a>
-          ))}
-        </div>
+        <SocialIcons />
       </section>
     </Layout>
   );

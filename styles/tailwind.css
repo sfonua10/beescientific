@@ -1,5 +1,6 @@
 @tailwind base;
-/* Enable this to help identify where elements get painted on screen* {
+/* Enable this to help identify where elements get painted on screen*/
+/* * {
   border: 1px solid red;
 } */
 @tailwind components;

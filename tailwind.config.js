@@ -8,6 +8,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        'dark-black': '#414141',
+        'light-gray': '#A7A7A7',
         'blue-gray': '#959CB9',
         'darkish-blue': '#2E3E77'
       },
@@ -18,8 +20,12 @@ module.exports = {
         'sm2': '411px'
       },
       maxWidth: {
-        'hp': '15rem'
-       }
+        'hp': '15rem',
+        'bbp': '257px',
+      },
+      maxHeight: {
+        'bbd': '209px'
+      }
     },
   },
   variants: {
