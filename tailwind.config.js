@@ -22,6 +22,7 @@ module.exports = {
       maxWidth: {
         'hp': '15rem',
         'bbp': '257px',
+        'bbh': '288px',
       },
       maxHeight: {
         'bbd': '209px'

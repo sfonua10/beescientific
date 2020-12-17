@@ -10,7 +10,7 @@ import SocialIcons from '../components/socialIcons';
 const BeeBarrel = () => {
   return (
     <Layout>
-      <div className="mx-4 md:mx-28">
+      <div className="mx-4 md:mx-28 lg:mx-64">
         <div
           className="flex justify-center mt-8 relative"
           style={{ paddingTop: `56.25%` }}
@@ -20,6 +20,8 @@ const BeeBarrel = () => {
             url="https://www.youtube.com/watch?v=4FKwSIw-rSc"
             width="100%"
             height="100%"
+            light="images/beeBarrel/bee_barrel_thumbnail.png"
+            playing={true}
           />
         </div>
         <h1 className="text-2xl	text-dark-black font-black pt-8 pb-4">
