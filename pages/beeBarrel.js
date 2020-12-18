@@ -10,46 +10,25 @@ import SocialIcons from '../components/socialIcons';
 const BeeBarrel = () => {
   return (
     <Layout>
-      {/* <div
-          className="flex justify-center mt-8 relative lg:mt-16"
-          style={{ paddingTop: `56.25%` }}
-        >
-          <ReactPlayer
-            style={{ position: `absolute`, top: 0, left: 0 }}
-            url="https://www.youtube.com/watch?v=4FKwSIw-rSc"
-            width="100%"
-            height="100%"
-            light="images/beeBarrel/bee_barrel_thumbnail.png"
-            playing={true}
-          />
-        </div> */}
-      <video
-        className="mx-auto lg:mt-16"
-        width="620"
-        controls
-        poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg"
+      <div className="mx-4 md:mx-28 lg:mx-auto max-w-4xl">
+      <div
+        className="flex justify-center mt-8 relative lg:mt-16"
+        style={{ paddingTop: `56.25%` }}
       >
-        <source
-          src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
-          type="video/mp4"
+        <ReactPlayer
+          style={{ position: `absolute`, top: 0, left: 0 }}
+          url="https://www.youtube.com/watch?v=4FKwSIw-rSc"
+          width="100%"
+          height="100%"
+          light="images/beeBarrel/bee_barrel_thumbnail.png"
+          playing={true}
         />
-        <source
-          src="https://archive.org/download/ElephantsDream/ed_hd.ogv"
-          type="video/ogg"
-        />
-        <source
-          src="https://archive.org/download/ElephantsDream/ed_hd.avi"
-          type="video/avi"
-        />
-        Your browser doesn't support HTML5 video tag.
-      </video>
-      <div className="mx-4 md:mx-28 lg:mx-64">
+      </div>
         <section className="md:flex md:gap-x-5 md:mb-14">
           <div>
-            <h1 className="text-2xl	text-dark-black font-black pt-8 pb-4">
+            <h1 className="text-2xl	text-dark-black font-black pt-8 pb-4 lg:text-4xl">
               Bee Barrels
             </h1>
-            {/* <p className="text-sm pb-6 md:max-w-bbp lg:bbp-lg md:pb-0 lg:text-lg"> */}
             <p className="text-sm pb-6 md:pb-0 lg:text-lg">
               The Bee Barrel is a new beehive designed to improve the
               environment for the bees and performance for the beekeeper. It
@@ -60,7 +39,6 @@ const BeeBarrel = () => {
               community.
             </p>
           </div>
-          {/* <div className="flex flex-col text-white bg-blue-gray md:self-center max-w-bb-d-sm md:py-10 lg:max-h-bb-d-lg mx-auto md:px-6 md:mt-16"> */}
           <div className="flex flex-col text-white bg-blue-gray md:self-center md:min-w-1/2 mx-auto md:mx-0 md:px-6 md:py-10 md:mt-16 lg:px-12 lg:py-12">
             <h1 className="text-2xl font-extrabold pt-10 text-center pb-4 md:text-base md:pb-6 md:pt-0 lg:text-2xl">
               THE DESIGN PROVIDES:
@@ -76,7 +54,7 @@ const BeeBarrel = () => {
           </div>
         </section>
         <section>
-          <h1 className="text-2xl py-8 font-extrabold md:text-3xl md:mb-12 md:py-0">
+          <h1 className="text-2xl py-8 font-extrabold md:text-3xl md:mb-12 md:py-0 lg:text-3xl">
             So, what are the benefits?
           </h1>
           <Benefits
@@ -133,7 +111,7 @@ const BeeBarrel = () => {
           />
         </section>
         <section className="pb-16">
-          <h1 className="text-2xl font-black pb-4">How It Works</h1>
+          <h1 className="text-2xl font-black pb-4 lg:text-4xl">How It Works</h1>
           <HowItWorks
             imgSrc="/images/how-it-works-1.jpg"
             subTitle="Adjustable Bee Gate"
@@ -141,6 +119,7 @@ const BeeBarrel = () => {
         entrance is narrow in order to give guard bees something to protect. You
         can adjust the gate from fully open to fully closed, which might be used
         when transporting the hive."
+            url="https://www.youtube.com/watch?v=h-6k5cRBON0"
           />
           <HowItWorks
             imgSrc="/images/how-it-works-2.jpg"
@@ -149,6 +128,7 @@ const BeeBarrel = () => {
             providing basic access for the bees to their food. The feeder is
             easy to fill with whatever you’d like to give your bees, and they
             can access it from the bottom of the feeder, inside the hive."
+            url="https://www.youtube.com/watch?v=Bl04i6qtens"
           />
         </section>
         <section className="pb-20">

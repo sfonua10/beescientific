@@ -32,7 +32,7 @@ module.exports = {
         'bbp-lg': '487px',
         'bbh': '288px',
         'bb-d-sm': '343px',
-
+        'bb-image-label': '162px'
       },
       maxHeight: {
         'bbd': '209px',
