@@ -6,6 +6,13 @@ module.exports = {
       sans: ['Avenir', 'sans-serif'],
       serif: ['Avenir', 'serif'],
     },
+    minWidth: {
+      '0': '0',
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
+      'full': '100%',
+     },
     extend: {
       colors: {
         'dark-black': '#414141',
@@ -22,6 +29,7 @@ module.exports = {
       maxWidth: {
         'hp': '15rem',
         'bbp': '257px',
+        'bbp-lg': '487px',
         'bbh': '288px',
         'bb-d-sm': '343px',
 
@@ -29,6 +37,7 @@ module.exports = {
       maxHeight: {
         'bbd': '209px',
         'bb-d-sm': '204px',
+        'bb-d-lg': '248px',
       }
     },
   },

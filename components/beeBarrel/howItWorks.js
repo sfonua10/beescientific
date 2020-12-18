@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player/youtube';
 
 const HowItWorks = ({ imgSrc, subTitle, text }) => {
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div className="flex flex-col xl:flex-row">
     <video width="620" controls
       poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg" >
       <source

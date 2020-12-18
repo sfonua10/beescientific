@@ -11,7 +11,7 @@ const Benefits = ({ title, subtitle, text, text2, images, imagesText }) => {
       {text2 ? <p className="text-sm pb-6">{text2}</p> : <></>}
 
       {images ? (
-        <div className="flex space-x-4 pb-8">
+        <div className="flex space-x-4 pb-8 justify-center">
           <div>
           <picture>
             <source media="(max-width: 640px)" srcSet="images/beeBarrel/bees-drawing-comb-174w.jpg" />

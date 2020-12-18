@@ -10,9 +10,8 @@ import SocialIcons from '../components/socialIcons';
 const BeeBarrel = () => {
   return (
     <Layout>
-      <div className="mx-4 md:mx-28 lg:mx-64">
-        <div
-          className="flex justify-center mt-8 relative"
+      {/* <div
+          className="flex justify-center mt-8 relative lg:mt-16"
           style={{ paddingTop: `56.25%` }}
         >
           <ReactPlayer
@@ -23,30 +22,56 @@ const BeeBarrel = () => {
             light="images/beeBarrel/bee_barrel_thumbnail.png"
             playing={true}
           />
-        </div>
-        <h1 className="text-2xl	text-dark-black font-black pt-8 pb-4">
-          Bee Barrels
-        </h1>
+        </div> */}
+      <video
+        className="mx-auto lg:mt-16"
+        width="620"
+        controls
+        poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg"
+      >
+        <source
+          src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="https://archive.org/download/ElephantsDream/ed_hd.ogv"
+          type="video/ogg"
+        />
+        <source
+          src="https://archive.org/download/ElephantsDream/ed_hd.avi"
+          type="video/avi"
+        />
+        Your browser doesn't support HTML5 video tag.
+      </video>
+      <div className="mx-4 md:mx-28 lg:mx-64">
         <section className="md:flex md:gap-x-5 md:mb-14">
-          <p className="text-sm pb-6 md:max-w-bbp md:pb-0 lg:text-lg">
-            The Bee Barrel is a new beehive designed to improve the environment
-            for the bees and performance for the beekeeper. It maintains
-            traditional beekeeping techniques while streamlining the management
-            of bee colonies, reducing loss, and promoting better colony health.
-            The Bee Barrel’s modern design benefits the bees, benefits the
-            beekeepers, and also benefits the scientific community.
-          </p>
-          <div className="flex flex-col text-white bg-blue-gray max-w-bb-d-sm md:py-10 mx-auto md:px-6">
-            <h1 className="text-2xl font-extrabold pt-10 text-center pb-4 md:text-base md:pb-6 md:pt-0">
+          <div>
+            <h1 className="text-2xl	text-dark-black font-black pt-8 pb-4">
+              Bee Barrels
+            </h1>
+            {/* <p className="text-sm pb-6 md:max-w-bbp lg:bbp-lg md:pb-0 lg:text-lg"> */}
+            <p className="text-sm pb-6 md:pb-0 lg:text-lg">
+              The Bee Barrel is a new beehive designed to improve the
+              environment for the bees and performance for the beekeeper. It
+              maintains traditional beekeeping techniques while streamlining the
+              management of bee colonies, reducing loss, and promoting better
+              colony health. The Bee Barrel’s modern design benefits the bees,
+              benefits the beekeepers, and also benefits the scientific
+              community.
+            </p>
+          </div>
+          {/* <div className="flex flex-col text-white bg-blue-gray md:self-center max-w-bb-d-sm md:py-10 lg:max-h-bb-d-lg mx-auto md:px-6 md:mt-16"> */}
+          <div className="flex flex-col text-white bg-blue-gray md:self-center md:min-w-1/2 mx-auto md:mx-0 md:px-6 md:py-10 md:mt-16 lg:px-12 lg:py-12">
+            <h1 className="text-2xl font-extrabold pt-10 text-center pb-4 md:text-base md:pb-6 md:pt-0 lg:text-2xl">
               THE DESIGN PROVIDES:
             </h1>
             <ol
-              className="px-16 pb-10 text-sm md:px-0 md:pb-0"
+              className="px-16 pb-10 text-sm md:px-0 md:pb-0 lg:text-lg"
               style={{ minWidth: `205`, alignSelf: `center` }}
             >
-              <li>1. Benefits for the bees.</li>
-              <li>2. Benefits for the beekeepers.</li>
-              <li>3. Benefits for the scientific community.</li>
+              <li>1. &nbsp;Benefits for the bees.</li>
+              <li>2. &nbsp;Benefits for the beekeepers.</li>
+              <li>3. &nbsp;Benefits for the scientific community.</li>
             </ol>
           </div>
         </section>
