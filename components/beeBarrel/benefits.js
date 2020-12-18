@@ -11,12 +11,12 @@ const Benefits = ({ title, subtitle, text, text2, images, imagesText }) => {
       {text2 ? <p className="text-sm pb-6">{text2}</p> : <></>}
 
       {images ? (
-        <div className="flex space-x-4 pb-8">
+        <div className="flex space-x-4 pb-8 justify-center">
           <div>
           <picture>
-            <source media="(max-width: 640px)" srcset="images/beeBarrel/bees-drawing-comb-174w.jpg" />
-            <source media="(max-width: 1024px)" srcset="images/beeBarrel/bees-drawing-comb-257w.jpg" />
-            <source media="(min-width: 1024px)" srcset="images/beeBarrel/bees-drawing-comb-441w.png" />
+            <source media="(max-width: 640px)" srcSet="images/beeBarrel/bees-drawing-comb-174w.jpg" />
+            <source media="(max-width: 1024px)" srcSet="images/beeBarrel/bees-drawing-comb-257w.jpg" />
+            <source media="(min-width: 1024px)" srcSet="images/beeBarrel/bees-drawing-comb-441w.png" />
             <img src="images/beeBarrel/bees-drawing-comb-174w.jpg" alt="Chris standing up holding his daughter Elva" />
           </picture>
             <h5 className="text-xs" style={{ maxWidth: `10rem` }}>
@@ -25,9 +25,9 @@ const Benefits = ({ title, subtitle, text, text2, images, imagesText }) => {
           </div>
           <div>
           <picture>
-            <source media="(max-width: 640px)" srcset="images/beeBarrel/hive-unique-161w.jpg" />
-            <source media="(max-width: 1024px)" srcset="images/beeBarrel/hive-unique-258w.png" />
-            <source media="(min-width: 1024px)" srcset="images/beeBarrel/hive-unique-441w.png" />
+            <source media="(max-width: 640px)" srcSet="images/beeBarrel/hive-unique-161w.jpg" />
+            <source media="(max-width: 1024px)" srcSet="images/beeBarrel/hive-unique-258w.png" />
+            <source media="(min-width: 1024px)" srcSet="images/beeBarrel/hive-unique-441w.png" />
             <img src="images/beeBarrel/hive-unique-161w.jpg" alt="Chris standing up holding his daughter Elva" />
           </picture>
             <h5 className="text-xs" style={{ maxWidth: `10rem` }}>
