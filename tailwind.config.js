@@ -23,9 +23,12 @@ module.exports = {
         'hp': '15rem',
         'bbp': '257px',
         'bbh': '288px',
+        'bb-d-sm': '343px',
+
       },
       maxHeight: {
-        'bbd': '209px'
+        'bbd': '209px',
+        'bb-d-sm': '204px',
       }
     },
   },
