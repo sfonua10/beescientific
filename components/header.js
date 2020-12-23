@@ -16,7 +16,21 @@ export default function Header() {
 
         <nav className="ml-4">
           <a>
-            <img src="/images/logo.svg" className="stroke-1" />
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcSet="/images/icon-small.svg"
+              />
+              <source
+                media="(max-width: 1024px)"
+                srcSet="/images/icon-medium.svg"
+              />
+              <source
+                media="(min-width: 1024px)"
+                srcSet="/images/icon-large.svg"
+              />
+              <img src="/images/logo.svg" className="stroke-1" />
+            </picture>
           </a>
           <nav
             className={`fixed top-0 w-96 bg-gray-100 left-0 h-full overflow-x-hidden overflow-y-scroll p-4 ${
@@ -49,7 +63,7 @@ export default function Header() {
             <Link href="/">
               <a
                 className={`${
-                  useRouter().pathname === '/' ? 'font-black' : ''
+                  useRouter().pathname === '/' ? 'font-black text-sm lg:text-lg' : 'text-sm lg:text-lg'
                 }`}
               >
                 HOME
@@ -60,7 +74,7 @@ export default function Header() {
             <Link href="/beeBarrel">
               <a
                 className={`${
-                  useRouter().pathname === '/beeBarrel' ? 'font-black' : ''
+                  useRouter().pathname === '/beeBarrel' ? 'font-black text-sm lg:text-lg' : 'text-sm lg:text-lg'
                 }`}
               >
                 BEE BARREL
@@ -71,7 +85,7 @@ export default function Header() {
             <Link href="/about">
               <a
                 className={`${
-                  useRouter().pathname === '/about' ? 'font-black' : ''
+                  useRouter().pathname === '/about' ? 'font-black text-sm lg:text-lg' : 'text-sm lg:text-lg'
                 }`}
               >
                 ABOUT US
