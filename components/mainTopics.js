@@ -36,15 +36,13 @@ const MainTopic = ({ imageSrc, title, subTitle, buttonText, id }) => {
         ) : (
           ''
         )}
-        <h3 className="mb-6 font-bold md:text-2xl md:text-center">{title}</h3>
-        <div className="md:ml-10 md:max-w-hp">
-          <p className="mb-6">{subTitle}</p>
+        <h3 className="mb-6 text-lg font-bold md:text-2xl md:text-center lg:text-4xl">{title}</h3>
+        <div className="md:ml-10 md:max-w-hp lg:max-w-none">
+          <p className="text-sm mb-6 lg:text-2xl">{subTitle}</p>
           <span>
             <Button text={buttonText} />
             {id === 0 ? (
               <svg
-                // width="142"
-                // height="207"
                 className="hidden md:block w-36 h-52 float-right"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

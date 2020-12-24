@@ -68,8 +68,8 @@ export default function Home() {
     <Layout>
       <div className=" h-96 grid grid-cols-12 grid-rows-6 md:mt-16">
         <section className="hidden mx-12 md:mx-28 xl:block lg:col-start-2 lg:col-span-4 lg:mx-0 lg:row-start-2">
-          <h2 className="font-bold mb-4 md:text-2xl">Repopulate and Restore</h2>
-          <p className="mb-6 max-w-xs md:text-lg">
+          <h2 className="font-bold mb-4 md:text-2xl lg:text-4xl">Repopulate and Restore</h2>
+          <p className="mb-6 max-w-xs md:text-lg lg:text-2xl">
             Conserve an important natural resource with the award-winning Bee
             Barrel system. Watch your bee colonies grow!
           </p>
@@ -129,7 +129,7 @@ export default function Home() {
         </div>
 
         {/* Large 1024px */}
-        <div className="hidden absolute -top-7 right-2 -z-10 lg:block">
+        <div className="hidden absolute -top-7 right-0 -z-10 lg:block">
           <Image
             src="/images/mobile_hero_bee.svg"
             alt="Picture of bee"
@@ -139,15 +139,15 @@ export default function Home() {
           />
         </div>
       </div>
-      <section className="mx-12 md:mx-28 md:ml-48 xl:hidden">
-        <h2 className="font-bold mb-4 md:text-2xl">Repopulate and Restore</h2>
-        <p className="mb-6 max-w-xs md:text-lg">
+      <section className="mx-12 md:mx-28 md:ml-40 xl:hidden">
+        <h2 className="font-black mb-4 text-lg md:text-2xl">Repopulate and Restore</h2>
+        <p className="mb-6 max-w-xs text-sm leading-relaxed md:text-lg">
           Conserve an important natural resource with the award-winning Bee
           Barrel system. Watch your bee colonies grow!
         </p>
         <Button text="TAKE A LOOK" />
       </section>
-      <section className="flex flex-col mx-12 my-24 md:grid grid-cols-3 gap-x-20 md:mt-40 lg:m-36 xl:mt-60">
+      <section className="flex flex-col mx-12 my-24 md:grid grid-cols-3 gap-x-16 md:mt-40 md:mx-auto xl:mt-60 xl:max-w-4xl">
         {data.map((info) => (
           <>
             <FeatureBox
@@ -158,16 +158,18 @@ export default function Home() {
               text={info.text}
             />
             {info.id === 2 && (
-              <div className="self-center md:col-start-2 md:text-center">
+              <div className="self-center mt-8 md:mt-0 md:col-start-2 md:text-center">
                 <Button text="LEARN MORE" />
               </div>
             )}
           </>
         ))}
       </section>
+      {/* <section
+        className="sm2:ml-4 md:mt-40 md:mb-20 md:mx-auto md:max-w-3xl"
+      > */}
       <section
-        className="sm2:ml-4 md:mt-40 md:mb-20 md:max-w-3xl"
-        style={{ margin: `0 auto` }}
+        className="md:mt-40 md:mb-20 md:mx-auto md:max-w-3xl lg:max-w-5xl"
       >
         {data2.map((topic) => (
           <MainTopic

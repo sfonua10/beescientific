@@ -36,7 +36,7 @@ export default function Footer() {
         <p>MONA, UT 84645</p>
       </div>
 
-      <div className="flex flex-col justify-self-auto md:text-xs mr-4 md:justify-self-end md:self-end">
+      <div className="flex flex-col justify-self-auto md:text-xs md:mr-4 md:justify-self-end md:self-end">
         <img
           src="/images/logo_white.svg"
           className="self-end mb-3 hidden md:block"

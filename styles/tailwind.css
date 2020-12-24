@@ -11,3 +11,22 @@
 }
 
 @tailwind utilities;
+
+.image {
+  width: unset !important;
+  min-width: unset !important;
+  max-width: unset !important;
+  height: unset !important;
+  max-height: unset !important;
+  min-height: unset !important;
+  margin: 0 !important;
+}
+
+/* This is to avoid CLS */
+.image_container {
+  position: absolute;
+  overflow: hidden;
+  max-height: 450px;
+  max-width: 400px !important; /* Maximum value, the last size in the sizes prop */
+  width: 50vw;
+}

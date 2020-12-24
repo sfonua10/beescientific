@@ -27,12 +27,17 @@ module.exports = {
         'sm2': '411px'
       },
       maxWidth: {
+        'xs-0': '13.75rem',
+        'xs-1': '11.25rem',
         'hp': '15rem',
         'bbp': '257px',
         'bbp-lg': '487px',
         'bbh': '288px',
         'bb-d-sm': '343px',
         'bb-image-label': '162px'
+      },
+      minWidth: {
+        'xs-0': '11.875rem'
       },
       maxHeight: {
         'bbd': '209px',
