@@ -8,11 +8,31 @@ import {
 
 export default function Footer() {
   const socialIcons = [
-    <FaFacebookF size="24" />,
-    <FaTwitter size="24" />,
-    <FaPinterestP size="24" />,
-    <FaYoutube size="24" />,
-    <FaInstagram size="24" />,
+    {
+      id: 0,
+      icon: <FaFacebookF size="24" />,
+      href: 'https://www.facebook.com/beescientific',
+    },
+    {
+      id: 1,
+      icon: <FaTwitter size="24" />,
+      href: 'https://twitter.com/beescientific',
+    },
+    {
+      id: 2,
+      icon: <FaPinterestP size="24" />,
+      href: 'https://www.pinterest.com/beescientific/bee-barrel/',
+    },
+    {
+      id: 3,
+      icon: <FaYoutube size="24" />,
+      href: 'https://www.youtube.com/beescientific',
+    },
+    {
+      id: 4,
+      icon: <FaInstagram size="24" />,
+      href: 'https://www.instagram.com/bee.scientific/',
+    },
   ];
   return (
     <footer className="py-4 text-white flex blue-gray justify-center bg-blue-gray text-sm md:grid grid-cols-3">
@@ -23,11 +43,13 @@ export default function Footer() {
         <br />
         <p>CONNECT WITH US</p>
         <ul className="flex mt-3">
-          {socialIcons.map((icon, index) => (
-            <li key={index} className="mr-6">
-              <a>{icon}</a>
-            </li>
-          ))}
+          {socialIcons.map((social) => {
+            return (
+              <li key={social.id} className="mr-6">
+                <a href={'https://www.facebook.com/beescientific'}>{social.icon}</a>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className="justify-self-end hidden md:block">
@@ -42,7 +64,7 @@ export default function Footer() {
           className="self-end mb-3 hidden md:block"
         />
         <p>&#169; 2020 BEESCIENTIFIC, LLC.</p>
-        <p>ALL RIGHTS RESERVED</p>
+        <p className="text-center">ALL RIGHTS RESERVED</p>
       </div>
     </footer>
   );

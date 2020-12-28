@@ -18,7 +18,7 @@ export default function Header() {
           <a>
             <picture>
               <source
-                media="(max-width: 768px)"
+                media="(max-width: 767px)"
                 srcSet="/images/icon-small.svg"
               />
               <source
