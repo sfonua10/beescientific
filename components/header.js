@@ -14,11 +14,11 @@ export default function Header() {
           />
         </button>
 
-        <nav className="ml-4">
+        <nav className="ml-5">
           <a>
             <picture>
               <source
-                media="(max-width: 768px)"
+                media="(max-width: 767px)"
                 srcSet="/images/icon-small.svg"
               />
               <source

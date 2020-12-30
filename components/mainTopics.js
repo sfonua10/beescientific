@@ -13,57 +13,65 @@ const MainTopic = ({ imageSrc, title, subTitle, buttonText, id }) => {
           loading="lazy"
         />
       </div>
-      <div className="mx-12 mb-20 self-center md:mx-0 md:self-start">
+      <div className="mx-12 self-center md:mx-0 md:self-center">
         {id === 1 ? (
-          <svg
-            className="hidden md:block ml-32"
-            width="185"
-            height="179"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M86.5 106.788l47.298-26.085L183.5 106.81v44.73l-49.703 25.763L86.5 151.56v-44.772z"
-              stroke="#828BAD"
-              strokeWidth="3"
-            />
-            <path
-              d="M1.5 39.087L69.286 1.703 140.5 39.108v64.281l-71.215 36.913L1.5 103.409V39.087z"
-              stroke="#2E3E77"
-              strokeWidth="3"
-            />
-          </svg>
-        ) : (
-          ''
-        )}
-        <h3 className="mb-6 font-bold md:text-2xl md:text-center">{title}</h3>
-        <div className="md:ml-10 md:max-w-hp">
-          <p className="mb-6">{subTitle}</p>
-          <span>
-            <Button text={buttonText} />
-            {id === 0 ? (
+          <>
+            <div className="float-right">
               <svg
-                // width="142"
-                // height="207"
-                className="hidden md:block w-36 h-52 float-right"
+                className="hidden md:inline-block w-32 h-32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M1.5 134.788l47.298-26.085L98.5 134.809v44.73l-49.703 25.763L1.5 179.56v-44.772z"
-                  stroke="#828BAD"
-                  strokeWidth="3"
-                />
-                <path
-                  d="M1.5 39.087L69.286 1.703 140.5 39.108v64.281l-71.215 36.913L1.5 103.409V39.087z"
-                  stroke="#2E3E77"
-                  strokeWidth="3"
-                />
+                <g clipPath="url(#clip0)" strokeWidth="1.914">
+                  <path
+                    d="M55.173 68.114l30.168-16.638 31.702 16.65v28.531L85.341 113.09 55.173 96.67V68.115z"
+                    stroke="#828BAD"
+                  />
+                  <path
+                    d="M.957 24.931L44.193 1.087l45.423 23.858v41L44.193 89.49.957 65.959V24.93z"
+                    stroke="#2E3E77"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <path fill="#fff" d="M0 0h118v114.173H0z" />
+                  </clipPath>
+                </defs>
               </svg>
-            ) : (
-              ''
-            )}
-          </span>
+            </div>
+            <div className="hidden md:block w-32 h-32"></div>
+          </>
+        ) : (
+          ''
+        )}
+        <h3 className="mb-6 text-lg font-bold md:ml-10 md:text-2xl lg:text-4xl">
+          {title}
+        </h3>
+        <div className="md:ml-10 md:max-w-hp lg:max-w-none">
+          <p className="text-sm mb-6 md:text-lg lg:text-2xl">{subTitle}</p>
+        </div>
+        <div className="md:ml-10 mb-16">
+          <Button text={buttonText} />
+          {id === 0 ? (
+            <svg
+              className="hidden md:block w-32 h-32 float-right"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M.957 24.931L44.193 1.087l45.423 23.858v41L44.193 89.49.957 65.959V24.93z"
+                stroke="#2E3E77"
+                strokeWidth="1.914"
+              />
+              <path
+                d="M.957 82.725l30.168-16.638 31.702 16.65v28.531L31.125 127.7.957 111.281V82.725z"
+                stroke="#828BAD"
+                strokeWidth="1.914"
+              />
+            </svg>
+          ) : (
+            ''
+          )}
         </div>
       </div>
     </div>
