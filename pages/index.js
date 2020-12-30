@@ -71,7 +71,7 @@ export default function Home() {
           <h2 className="font-bold mb-4 md:text-2xl lg:text-4xl">
             Repopulate and Restore
           </h2>
-          <p className="mb-6 max-w-xs md:text-lg lg:text-2xl">
+          <p className="mb-6 max-w-xs md:text-lg lg:text-2xl lg:max-w-sm xl:mb-12">
             Conserve an important natural resource with the award-winning Bee
             Barrel system. Watch your bee colonies grow!
           </p>
@@ -151,8 +151,8 @@ export default function Home() {
         </p>
         <Button text="TAKE A LOOK" />
       </section>
-      <section className="flex flex-col mx-12 my-24 md:mt-40 md:mx-7 xl:mt-60 xl:max-w-4xl">
-        <div className="flex flex-col md:flex-row gap-x-16">
+      <section className="flex flex-col mx-12 my-24 md:mt-40 md:mx-7 xl:mt-60 xl:max-w-4xl xl:mx-auto">
+        <div className="flex flex-col md:flex-row gap-x-16 justify-center">
           {data.map((info) => (
             <>
               <FeatureBox
@@ -172,7 +172,7 @@ export default function Home() {
       {/* <section
         className="sm2:ml-4 md:mt-40 md:mb-20 md:mx-auto md:max-w-3xl"
       > */}
-      <section className="md:mt-40 md:mb-20 md:mx-auto md:max-w-3xl lg:max-w-5xl">
+      <section className="flex flex-col md:mt-40 md:mb-20 md:mx-auto md:max-w-3xl xl:max-w-xl-1">
         {data2.map((topic) => (
           <MainTopic
             key={topic.id}

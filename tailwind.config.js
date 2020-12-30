@@ -29,12 +29,14 @@ module.exports = {
       maxWidth: {
         'xs-0': '13.75rem',
         'xs-1': '11.25rem',
+        'xs-2': '16rem',
         'hp': '15rem',
         'bbp': '257px',
         'bbp-lg': '487px',
         'bbh': '288px',
         'bb-d-sm': '343px',
-        'bb-image-label': '162px'
+        'bb-image-label': '162px',
+        'xl-1': '62rem'
       },
       minWidth: {
         'xs-0': '11.875rem'
