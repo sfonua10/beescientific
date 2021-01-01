@@ -20,7 +20,7 @@ const BenefitsImage = ({imageSrc, imageText, alt}) => {
           alt={alt}
         />
       </picture>
-      <h5 className="text-xs max-w-1/4 lg:text-sm mt-2 lg:mt-2.5" style={{maxWidth: 162}}>{imageText}</h5>
+      <h5 className="text-xs max-w-1/4 lg:text-sm mt-2 md:mt-4 lg:mt-2.5">{imageText}</h5>
     </div>
   );
 };

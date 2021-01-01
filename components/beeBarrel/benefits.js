@@ -11,7 +11,8 @@ const Benefits = ({ alt, title, subtitle, text, text2, images, images2, imagesTe
       {text2 ? <p className="text-sm pb-6 lg:text-lg">{text2}</p> : <></>}
 
       {images ? (
-        <div className="flex space-x-4 pb-8 justify-center">
+        // <div className="flex space-x-4 pb-8 justify-center">
+        <div className="grid grid-cols-2 pb-8">
           <BenefitsImage
             imageSrc={images}
             imageText={imagesText[0]}

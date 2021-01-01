@@ -8,48 +8,56 @@ import SocialIcons from '../components/socialIcons';
 const About = () => {
   return (
     <Layout>
-      <div className="mx-4 mt-6 md:mx-28 lg:mx-auto max-w-4xl">
-        <picture>
-          <source media="(max-width: 640px)" srcSet="images/about/img-1.png" />
-          <source
-            media="(max-width: 1024px)"
-            srcSet="images/about/img-1-tab.png"
-          />
-          <source
-            media="(min-width: 1024px)"
-            srcSet="images/about/img-1-desk.png"
-          />
-          <img
-          src="images/about/img-1.png"
-          alt="hi"
-          />
-        </picture>
-        <section className="md:flex md:flex-col md:gap-x-5 md:mb-12">
-            <h1 className="text-2xl	text-dark-black font-black pt-8 pb-4 lg:text-4xl">
-              About Us
-            </h1>
+      <div className="mx-4 mt-6 md:mx-28 lg:mt-20 lg:mx-auto max-w-4xl">
+        <div className="grid lg:grid-cols-2 lg:gap-x-10">
+          <picture>
+            <source
+              media="(max-width: 640px)"
+              srcSet="images/about/img-1.png"
+            />
+            <source
+              media="(max-width: 1024px)"
+              srcSet="images/about/img-1-tab.png"
+            />
+            <source
+              media="(min-width: 1024px)"
+              srcSet="images/about/img-1-desk.png"
+            />
+            <img src="images/about/img-1.png" className="lg:h-desk lg:object-cover lg:object-center lg:w-full" alt="hi" />
+          </picture>
+          <section className="md:flex md:flex-col md:gap-x-5 md:mb-12">
+            <div className="lg:flex lg:justify-between">
+              <h1 className="text-2xl	text-dark-black font-black pt-8 pb-4 lg:text-4xl">
+                About Us
+              </h1>
+              <img
+                src="/images/about/about-hive-graphic.png"
+                className="hidden lg:block object-contain"
+              />
+            </div>
             <p className="text-sm pb-6 md:pb-0 lg:text-lg">
               BeeScientific was created in 2012, with the mission to perfect the
               beekeeping experience while protecting an important natural
               resource.
             </p>
-          <div className="flex flex-col text-white bg-blue-gray md:self-center md:min-w-1/2 mx-auto md:mx-0 md:px-6 md:py-10 md:mt-6 lg:px-12 lg:py-12">
-            <h1 className="text-2xl font-extrabold pt-10 text-center pb-4 md:text-base md:pb-6 md:pt-0 lg:text-2xl">
-              OUR MISSION
-            </h1>
-            <ol
-              className="px-16 pb-10 text-sm md:px-0 md:pb-0 lg:text-lg"
-              style={{ minWidth: `205`, alignSelf: `center` }}
-            >
-              <p>
-                To perfect the beekeeping experience by protecting our bees,
-                preserving our art, improving our techniques, and broadening our
-                understanding.
-              </p>
-            </ol>
-          </div>
-        </section>
-        <section className="my-8">
+            <div className="flex flex-col text-white bg-blue-gray md:self-center md:min-w-1/2 mx-auto md:mx-0 md:px-20 md:py-10 md:mt-6 lg:px-12 lg:py-12">
+              <h1 className="text-2xl font-extrabold pt-10 text-center pb-4 md:text-base md:pb-6 md:pt-0 lg:text-2xl">
+                OUR MISSION
+              </h1>
+              <div
+                className="px-12 pb-10 text-sm md:px-0 md:pb-0 lg:text-lg self-center"
+                style={{ minWidth: `205` }}
+              >
+                <p className="md:max-w-sm">
+                  To perfect the beekeeping experience by protecting our bees,
+                  preserving our art, improving our techniques, and broadening
+                  our understanding.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section className="my-8 md:mb-12">
           <Benefits
             title="Our Story"
             text="One fall weekend while living in California, I extracted over 300 pounds of honey from two backyard beehives. The process was laborious and difficult, and I thought there must be simpler alternative methods that could make harvesting honey easier and more efficient."
@@ -128,15 +136,17 @@ const About = () => {
             />
           </div>
         </section>
-        <section>
+        <section className="md:mb-12">
           <Benefits
             title="Cody Adams"
             subtitle="Founder of BeeScientific"
             text="I am an avid beekeeper and have been keeping bees and harvesting honey for several decades now. One out of every five bites of food we take is made possible by the hard work of honey bees, which makes them one of the most important natural resources in the world. I’m passionate about protecting and preserving them. I have a background in data collection, automation, manufacturing, and software engineering, all which fuel my interest for inventing and building. My love for bees and nature is what led me to create an innovative and unique beehive, the Bee Barrel."
           />
         </section>
-        <section className="mb-16">
-          <h1 className="font-extrabold text-xl mb-2">Tour the Bee Barrel Prototype</h1>
+        <section className="mb-16 md:mb-24">
+          <h1 className="font-extrabold text-xl mb-2">
+            Tour the Bee Barrel Prototype
+          </h1>
           <div
             className="flex justify-center relative lg:mt-16"
             style={{ paddingTop: `56.25%` }}
@@ -151,7 +161,7 @@ const About = () => {
             />
           </div>
         </section>
-        <section className="pb-20">
+        <section className="pb-20 md:mb-24">
           <ViewMore />
         </section>
         <section className="pb-4 md:hidden">

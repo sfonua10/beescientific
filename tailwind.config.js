@@ -45,6 +45,9 @@ module.exports = {
         'bbd': '209px',
         'bb-d-sm': '204px',
         'bb-d-lg': '248px',
+      },
+      height: {
+        'desk': '29rem'
       }
     },
   },
