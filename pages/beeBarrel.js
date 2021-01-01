@@ -11,19 +11,19 @@ const BeeBarrel = () => {
   return (
     <Layout>
       <div className="mx-4 md:mx-28 lg:mx-auto max-w-4xl">
-      <div
-        className="flex justify-center mt-8 relative lg:mt-16"
-        style={{ paddingTop: `56.25%` }}
-      >
-        <ReactPlayer
-          style={{ position: `absolute`, top: 0, left: 0 }}
-          url="https://www.youtube.com/watch?v=4FKwSIw-rSc"
-          width="100%"
-          height="100%"
-          light="images/beeBarrel/bee_barrel_thumbnail.png"
-          playing={true}
-        />
-      </div>
+        <div
+          className="flex justify-center mt-8 relative lg:mt-16"
+          style={{ paddingTop: `56.25%` }}
+        >
+          <ReactPlayer
+            style={{ position: `absolute`, top: 0, left: 0 }}
+            url="https://www.youtube.com/watch?v=4FKwSIw-rSc"
+            width="100%"
+            height="100%"
+            light="images/beeBarrel/bee_barrel_thumbnail.png"
+            playing={true}
+          />
+        </div>
         <section className="md:flex md:gap-x-5 md:mb-14">
           <div>
             <h1 className="text-2xl	text-dark-black font-black pt-8 pb-4 lg:text-4xl">
@@ -67,12 +67,22 @@ const BeeBarrel = () => {
             during seasonal changes and also helps regulate the temperature and
             humidity inside the hive cavity."
             images={[
-              'images/hones-bees-comb.png',
-              'images/unique-hive-barrel.jpg',
+              'images/beeBarrel/bees-drawing-comb-174w.jpg',
+              'images/beeBarrel/bees-drawing-comb-257w.jpg',
+              'images/beeBarrel/bees-drawing-comb-441w.png',
+            ]}
+            images2={[
+              'images/beeBarrel/hive-unique-161w.jpg',
+              'images/beeBarrel/hive-unique-258w.png',
+              'images/beeBarrel/hive-unique-441w.png',
             ]}
             imagesText={[
               'Honey bees quickly drawing comb once introduced to the Bee Barrel.',
               'The Bee Barrel hive’s unique design.',
+            ]}
+            alt={[
+              'Honey bees drawing comb',
+              'Unique Bee Barrel hive design'
             ]}
           />
           <Benefits
