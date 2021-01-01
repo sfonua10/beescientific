@@ -1,6 +1,6 @@
 import BenefitsImage from './benefitsImage';
 
-const Benefits = ({ title, subtitle, text, text2, images, imagesText }) => {
+const Benefits = ({ alt, title, subtitle, text, text2, images, images2, imagesText }) => {
   return (
     <section>
       <h3 className="text-lg font-extrabold pb-2 md:text-2xl">{title}</h3>
@@ -13,22 +13,14 @@ const Benefits = ({ title, subtitle, text, text2, images, imagesText }) => {
       {images ? (
         <div className="flex space-x-4 pb-8 justify-center">
           <BenefitsImage
-            imageSrc={[
-              'images/beeBarrel/bees-drawing-comb-174w.jpg',
-              'images/beeBarrel/bees-drawing-comb-257w.jpg',
-              'images/beeBarrel/bees-drawing-comb-441w.png',
-            ]}
-            imageText="The Bee Barrel hive's unique design."
-            alt="Honey bees drawing comb"
+            imageSrc={images}
+            imageText={imagesText[0]}
+            alt={alt[0]}
           />
           <BenefitsImage
-            imageSrc={[
-              'images/beeBarrel/hive-unique-161w.jpg',
-              'images/beeBarrel/hive-unique-258w.png',
-              'images/beeBarrel/hive-unique-441w.png',
-            ]}
-            imageText="The Bee Barrel hive's unique design."
-            alt="Honey bees drawing comb"
+            imageSrc={images2}
+            imageText={imagesText[1]}
+            alt={alt[1]}
           />
         </div>
       ) : null}
