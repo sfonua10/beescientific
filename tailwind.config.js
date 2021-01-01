@@ -48,7 +48,10 @@ module.exports = {
       },
       height: {
         'desk': '29rem'
-      }
+      },
+      borderWidth: {
+        '1': '1px'
+      },
     },
   },
   variants: {
