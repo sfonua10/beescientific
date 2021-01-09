@@ -7,7 +7,7 @@
 
 /* Write your own custom component styles here */
 .btn-blue {
-  @apply py-2 px-4 border border-transparent shadow-sm text-sm font-medium text-white bg-darkish-blue hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+  @apply py-2 px-4 border border-transparent shadow-sm text-sm font-medium text-white bg-darkish-blue hover:bg-white hover:text-darkish-blue hover:border-darkish-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
 }
 
 @tailwind utilities;
