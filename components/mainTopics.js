@@ -1,24 +1,37 @@
 import Button from './button';
-import Image from 'next/image';
 
-const MainTopic = ({ imageSrc, title, subTitle, buttonText, id }) => {
+const MainTopic = ({ alt, imageSrc, srcSet, title, subTitle, buttonText, id }) => {
   return (
-    <div className="grid grid-cols-1 items-center md:grid md:grid-cols-2">
-      <div className={`mx-auto mb-7 ${id === 1 ? 'md:order-1' : 'order-none xl:mx-0 xl:justify-self-end'}`}>
-        <Image
-          src={imageSrc}
-          srcSet="/images/bee-barrels.png 343w, /images/bee-barrels-tab.png 350w, /images/bee-barrels-desk.png 471w"
-          sizes="(max-width: 350px) 343px, 50vw"
-          width={343}
-          height={330}
-          layout="intrinsic"
-          loading="lazy"
-        />
+    <div className="grid grid-cols-1 items-center md:grid-cols-2">
+      <div
+        className={`mx-auto mb-7 xl:mx-0 ${
+          id === 1 ? 'md:order-1' : 'order-none xl:mx-0'
+        }`}
+      >
+        <picture className="w-full">
+          <source
+            media="(max-width: 640px)"
+            srcSet={srcSet[0]}
+          />
+          <source
+            media="(max-width: 1280px)"
+            srcSet={srcSet[1]}
+          />
+          <source
+            media="(min-width: 1280px)"
+            srcSet={srcSet[2]}
+          />
+          <img
+            src={imageSrc}
+            className="lg:object-cover lg:object-center"
+            alt={alt}
+          />
+        </picture>{' '}
       </div>
       <div className="mx-auto self-center px-10 md:px-0 md:mx-0 md:self-center">
         {id === 1 ? (
           <>
-            <div className="float-right">
+            <div className="float-right lg:mr-20">
               <svg
                 className="hidden md:inline-block w-32 h-32"
                 fill="none"
@@ -46,13 +59,13 @@ const MainTopic = ({ imageSrc, title, subTitle, buttonText, id }) => {
         ) : (
           ''
         )}
-        <h3 className="mb-6 text-lg font-bold md:ml-6 md:text-2xl xl:text-4xl">
+        <h3 className="mb-6 text-lg font-bold md:ml-6 md:text-2xl xl:text-4xl lg:ml-10">
           {title}
         </h3>
-        <div className="md:ml-6 md:max-w-hp xl:max-w-none">
+        <div className="md:ml-6 md:max-w-hp xl:max-w-none lg:ml-10">
           <p className="text-sm mb-6 md:text-lg xl:text-2xl">{subTitle}</p>
         </div>
-        <div className="md:ml-6 mb-16">
+        <div className="md:ml-6 mb-16 lg:ml-10">
           <Button text={buttonText} />
           {id === 0 ? (
             <svg

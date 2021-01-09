@@ -51,15 +51,19 @@ export default function Home() {
     {
       id: 0,
       imageSrc: '/images/bee-barrels.png',
+      srcSet: ['images/bee-barrels.png', 'images/bee-barrels-tab.png', 'images/bee-barrels-desk.png'],
       title: 'Introducing the Bee Barrel',
       subTitle: 'An exciting solution for an invaluable natural resource.',
+      alt: 'beehive barrels with bees on them',
       buttonText: 'SEE MORE',
     },
     {
       id: 1,
-      imageSrc: '/images/bee_home_2.png',
+      imageSrc: '/images/bee-hole.png',
+      srcSet: ['images/bee-hole.png', 'images/bee-hole-tab.png', 'images/bee-hole-desk.png'],
       title: 'Contribute or Invest',
       subTitle: 'Learn more about our business and become part of the team!',
+      alt: 'bees swarm out of hole',
       buttonText: 'JOIN US',
     },
   ];
@@ -178,6 +182,7 @@ export default function Home() {
             key={topic.id}
             id={topic.id}
             imageSrc={topic.imageSrc}
+            srcSet={topic.srcSet}
             title={topic.title}
             subTitle={topic.subTitle}
             buttonText={topic.buttonText}
