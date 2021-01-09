@@ -9,7 +9,7 @@ export default function Layout({ children }) {
       <Head>
         <title>Beescientific</title>
         <link rel="icon" href="images/favicon.png" />
-        <meta property="og:image" content="images/bee-scientific-cody-adams" />
+        <meta property="og:image" content="images/bee-scientific-cody-adams.jpg" />
       </Head>
       <Header />
       <main className="text-dark-black">{children}</main>
