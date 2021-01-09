@@ -3,17 +3,19 @@ import Image from 'next/image';
 
 const MainTopic = ({ imageSrc, title, subTitle, buttonText, id }) => {
   return (
-    <div className="flex flex-col items-center md:grid md:grid-cols-2">
-      <div className={`mx-4 mb-7 ${id === 1 ? 'md:order-1' : 'order-none'}`}>
+    <div className="grid grid-cols-1 items-center md:grid md:grid-cols-2">
+      <div className={`mx-auto mb-7 ${id === 1 ? 'md:order-1' : 'order-none xl:mx-0 xl:justify-self-end'}`}>
         <Image
           src={imageSrc}
+          srcSet="/images/bee-barrels.png 343w, /images/bee-barrels-tab.png 350w, /images/bee-barrels-desk.png 471w"
+          sizes="(max-width: 350px) 343px, 50vw"
           width={343}
           height={330}
-          layout="fixed"
+          layout="intrinsic"
           loading="lazy"
         />
       </div>
-      <div className="mx-12 self-center md:mx-0 md:self-center">
+      <div className="mx-auto self-center px-10 md:px-0 md:mx-0 md:self-center">
         {id === 1 ? (
           <>
             <div className="float-right">
@@ -44,13 +46,13 @@ const MainTopic = ({ imageSrc, title, subTitle, buttonText, id }) => {
         ) : (
           ''
         )}
-        <h3 className="mb-6 text-lg font-bold md:ml-10 md:text-2xl lg:text-4xl">
+        <h3 className="mb-6 text-lg font-bold md:ml-6 md:text-2xl xl:text-4xl">
           {title}
         </h3>
-        <div className="md:ml-10 md:max-w-hp lg:max-w-none">
-          <p className="text-sm mb-6 md:text-lg lg:text-2xl">{subTitle}</p>
+        <div className="md:ml-6 md:max-w-hp xl:max-w-none">
+          <p className="text-sm mb-6 md:text-lg xl:text-2xl">{subTitle}</p>
         </div>
-        <div className="md:ml-10 mb-16">
+        <div className="md:ml-6 mb-16">
           <Button text={buttonText} />
           {id === 0 ? (
             <svg

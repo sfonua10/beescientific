@@ -50,7 +50,7 @@ export default function Home() {
   const data2 = [
     {
       id: 0,
-      imageSrc: '/images/bee_barrels_home_1.png',
+      imageSrc: '/images/bee-barrels.png',
       title: 'Introducing the Bee Barrel',
       subTitle: 'An exciting solution for an invaluable natural resource.',
       buttonText: 'SEE MORE',
@@ -78,7 +78,7 @@ export default function Home() {
           <Button text="TAKE A LOOK" />
         </section>
         <svg
-          className="h-32 w-32 md:w-64 h-72 z-10 self-center justify-self-center row-start-3 col-start-4 md:col-start-5 md:col lg:col-start-4 xl:col-start-6"
+          className="h-32 w-32 md:w-64 h-72 z-10 self-center justify-self-center row-start-3 col-start-4 md:col-start-5 md:col lg:col-start-4 xl:col-start-7"
           viewBox="0 0 281 294"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
