@@ -33,14 +33,14 @@ export default function Header() {
             </picture>
           </a>
           <nav
-            className={`fixed top-0 w-96 bg-gray-100 left-0 h-full overflow-x-hidden overflow-y-scroll p-4 ${
+            className={`fixed top-0 w-full bg-white left-0 h-full overflow-x-hidden overflow-y-scroll p-4 z-20 ${
               !isOpen ? 'hidden' : ''
             }`}
           >
             <button className="float-right" onClick={() => setIsOpen(false)}>
               <img src="/images/close.png" alt="close menu" />
             </button>
-            <div className="ml-4">
+            <div className="ml-4 flex flex-col text-center">
               <Link href="/">
                 <a className="mb-4 leading-8 block text-sm">HOME</a>
               </Link>

@@ -4,14 +4,12 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 export default function Layout({ children }) {
-  // if(document) {
-  //   document?.querySelector('body').style.backgroundColor = 'lightblue'
-  // }
   return (
     <div>
       <Head>
         <title>Beescientific</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="images/favicon.png" />
+        <meta property="og:image" content="images/bee-scientific-cody-adams" />
       </Head>
       <Header />
       <main className="text-dark-black">{children}</main>

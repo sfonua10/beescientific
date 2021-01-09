@@ -46,7 +46,7 @@ export default function Footer() {
           {socialIcons.map((social) => {
             return (
               <li key={social.id} className="mr-6">
-                <a href={'https://www.facebook.com/beescientific'}>{social.icon}</a>
+                <a href={social.href}>{social.icon}</a>
               </li>
             );
           })}
