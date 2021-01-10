@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import ReactPlayer from 'react-player/youtube';
 
-const HowItWorks = ({ imgSrc, subTitle, text, url }) => {
+const HowItWorks = ({ imgSrc, subTitle, text, thumbnail, url }) => {
   return (
     <div className="flex flex-col lg:flex-row lg:mb-14">
       <div
@@ -18,7 +18,7 @@ const HowItWorks = ({ imgSrc, subTitle, text, url }) => {
         />
       </div>
       <div className="hidden lg:contents">
-        <ReactPlayer url={url} />
+        <ReactPlayer url={url} light={thumbnail} playing={true} />
       </div>
       {/* <Image src={imgSrc} alt="how it works video" width={570} height={339} layout="fixed" /> */}
       <div className="lg:ml-16 lg:max-w-bbh">

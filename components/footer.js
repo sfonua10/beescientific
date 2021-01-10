@@ -35,7 +35,7 @@ export default function Footer() {
     },
   ];
   return (
-    <footer className="py-4 text-white flex blue-gray justify-center bg-blue-gray text-sm md:grid grid-cols-3">
+    <footer className="py-4 text-white flex blue-gray justify-center bg-blue-gray text-sm md:grid grid-cols-3 xl:px-28">
       <div className="ml-4 hidden md:block ">
         <p>OUR MISSION</p>
         <p>BECOME A CONTRIBUTOR</p>

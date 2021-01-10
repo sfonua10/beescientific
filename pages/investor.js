@@ -21,8 +21,8 @@ const Investor = () => {
           />
           <img
             src="images/investor/bees.png"
-            className="lg:h-desk lg:object-cover lg:object-center lg:w-full"
-            alt="hi"
+            className="mb-6 lg:h-desk lg:object-cover lg:object-center lg:w-full"
+            alt="Busy bees buzzing around"
           />
         </picture>{' '}
         <Benefits
@@ -32,24 +32,46 @@ const Investor = () => {
           text3="We’re also expanding our product offerings, with services and accessories. These will include stands, extractors, and equipment. We plan to offer sensors and other devices for advanced monitoring, barrel maintenance, apiary management, and risk assessment."
           text4="We are currently looking for the right investors for this innovative and unique beehive system. We’re seeking single/first round seed funding for pre-production expenses. If you reside or operate in the United States and are passionate about saving honey bees, we would love to hear from you!"
         />
-        <h3 className="text-lg font-extrabold pb-2 md:text-2xl">Contact Us</h3>
-
+        <h3 className="text-lg font-extrabold mt-4 pb-2 md:text-2xl">
+          Contact Us
+        </h3>
         <form action="" className="flex flex-col">
           <div className="flex flex-col mb-5">
-            <input type="text" name="name" id="name" className="box-border rounded-sm border-dark-black border-1 h-8" />
-            <label for="name" className="text-sm ml-2">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              className="box-border rounded-sm border-dark-black border-1 h-8"
+            />
           </div>
           <div className="flex flex-col mb-5">
-            <input type="email" name="email" id="email" className="rounded-sm border-dark-black border-1 h-8"/>
-            <label for="email" className="text-sm ml-2">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              className="rounded-sm border-dark-black border-1 h-8"
+            />
           </div>
           <div className="flex flex-col mb-5">
-            <input type="phone" name="phone" id="phone" className="rounded-sm border-dark-black border-1 h-8"/>
-            <label for="phone" className="text-sm ml-2">Phone Number</label>
+            <input
+              type="phone"
+              name="phone"
+              id="phone"
+              placeholder="Phone Number"
+              className="rounded-sm border-dark-black border-1 h-8"
+            />
           </div>
           <div className="flex flex-col mb-5">
-            <textarea type="message" name="message" id="message" rows="10" className="rounded-sm border-dark-black border-1"/>
-            <label for="message" className="text-sm ml-2">Message</label>
+            <textarea
+              type="message"
+              name="message"
+              id="message"
+              placeholder="Message"
+              rows="10"
+              className="rounded-sm border-dark-black border-1"
+            />
           </div>
           <div className="self-center mb-12 lg:self-end">
             <Button text="SUBMIT" />

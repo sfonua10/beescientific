@@ -121,7 +121,7 @@ const BeeBarrel = () => {
           />
         </section>
         <section className="pb-16">
-          <h1 className="text-2xl font-black pb-4 lg:text-4xl">How It Works</h1>
+          <h1 className="text-2xl font-black pb-4 lg:mt-10 lg:text-4xl">How It Works</h1>
           <HowItWorks
             imgSrc="/images/how-it-works-1.jpg"
             subTitle="Adjustable Bee Gate"
@@ -130,6 +130,7 @@ const BeeBarrel = () => {
         can adjust the gate from fully open to fully closed, which might be used
         when transporting the hive."
             url="https://www.youtube.com/watch?v=h-6k5cRBON0"
+            thumbnail="/images/beeBarrel/how-it-works-thumbnail1.png"
           />
           <HowItWorks
             imgSrc="/images/how-it-works-2.jpg"
@@ -138,7 +139,8 @@ const BeeBarrel = () => {
             providing basic access for the bees to their food. The feeder is
             easy to fill with whatever you’d like to give your bees, and they
             can access it from the bottom of the feeder, inside the hive."
-            url="https://www.youtube.com/watch?v=Bl04i6qtens"
+            url="https://www.youtube.com/watch?v=2NeC-cIyjBw"
+            thumbnail="/images/beeBarrel/how-it-works-thumbnail2.png"
           />
         </section>
         <section className="pb-20">
