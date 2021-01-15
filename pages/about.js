@@ -1,10 +1,10 @@
+import Link from "next/link";
 import Layout from '../components/layout';
 import Benefits from '../components/beeBarrel/benefits';
 import BenefitsImage from '../components/beeBarrel/benefitsImage';
 import ReactPlayer from 'react-player/youtube';
 import ViewMore from '../components/viewMore';
 import SocialIcons from '../components/socialIcons';
-
 const About = () => {
   return (
     <Layout>
@@ -93,9 +93,14 @@ const About = () => {
             nutrients to the hive until early spring when flowers arrive. The
             Bee Barrel system is now ready for manufacture and to help preserve
             and repopulate honey bee populations.{' '}
+            <Link href="/beeBarrel">
+            <a>
+
             <span className="text-blue-gray">
               Learn more about the benefits of the Bee Barrel here.
             </span>
+            </a>
+            </Link>
           </p>
           <div className="grid grid-cols-2 gap-x-5 gap-y-4">
             <BenefitsImage

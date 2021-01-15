@@ -70,7 +70,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className=" h-96 grid grid-cols-12 grid-rows-6 md:mt-16">
+      <div className="h-96 grid grid-cols-12 grid-rows-6 md:mt-16 2xl:mx-60 2xl:mx-auto">
         <section className="hidden mx-12 md:mx-28 xl:block lg:col-start-2 lg:col-span-4 lg:mx-0 lg:row-start-2">
           <h2 className="font-bold mb-4 md:text-2xl lg:text-4xl">
             Repopulate and Restore
@@ -79,7 +79,7 @@ export default function Home() {
             Conserve an important natural resource with the award-winning Bee
             Barrel system. Watch your bee colonies grow!
           </p>
-          <Button text="TAKE A LOOK" />
+          <Button text="TAKE A LOOK" href="/beeBarrel" />
         </section>
         <svg
           className="h-32 w-32 md:w-64 h-72 z-10 self-center justify-self-center row-start-3 col-start-4 md:col-start-5 md:col lg:col-start-4 xl:col-start-7"
@@ -135,7 +135,7 @@ export default function Home() {
         </div>
 
         {/* Large 1024px */}
-        <div className="hidden absolute -top-7 right-0 -z-10 lg:block">
+        <div className="hidden absolute -top-7 right-0 -z-10 lg:block xl:mr-auto">
           <Image
             src="/images/mobile_hero_bee.svg"
             alt="Picture of bee"
@@ -153,7 +153,7 @@ export default function Home() {
           Conserve an important natural resource with the award-winning Bee
           Barrel system. Watch your bee colonies grow!
         </p>
-        <Button text="TAKE A LOOK" />
+        <Button text="TAKE A LOOK" href="/beeBarrel" />
       </section>
       <section className="flex flex-col mx-12 my-24 md:mt-40 md:mx-7 xl:mt-60 xl:max-w-4xl xl:mx-auto">
         <div className="flex flex-col md:flex-row gap-x-16 justify-center">
@@ -170,7 +170,7 @@ export default function Home() {
           ))}
         </div>
         <div className="self-center mt-8 md:mt-0 md:col-start-2 md:text-center">
-          <Button text="LEARN MORE" />
+          <Button text="LEARN MORE" href="/beeBarrel" />
         </div>
       </section>
       {/* <section

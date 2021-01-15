@@ -7,7 +7,7 @@ const ViewMore = () => {
         Want to view more videos?
       </h1>
       <div className="self-center">
-        <Button text="CLICK HERE" href="https://www.youtube.com/beescientific" />
+        <Button text="CLICK HERE" href="https://www.youtube.com/beescientific" target="_blank" />
       </div>
     </div>
   );

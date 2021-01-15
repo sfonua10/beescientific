@@ -66,7 +66,7 @@ const MainTopic = ({ alt, imageSrc, srcSet, title, subTitle, buttonText, id }) =
           <p className="text-sm mb-6 md:text-lg xl:text-2xl">{subTitle}</p>
         </div>
         <div className="md:ml-6 mb-16 lg:ml-10">
-          <Button text={buttonText} />
+          <Button text={buttonText} href={`${id === 0 ? "/beeBarrel" : "/investor"}`} />
           {id === 0 ? (
             <svg
               className="hidden md:block w-32 h-32 float-right"

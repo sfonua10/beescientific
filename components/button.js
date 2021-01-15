@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
-const Button = ({ text, href = "" }) => {
+const Button = ({ text, href = "", target = "_self" }) => {
   return (
     <button className="btn-blue">
       <Link href={href}>
-        <a target="_blank">{text}</a>
+        <a target={target}>{text}</a>
       </Link>
     </button>
   );
