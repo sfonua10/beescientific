@@ -1,8 +1,76 @@
+import React, { useReducer } from 'react';
 import Layout from '../components/layout';
 import Benefits from '../components/beeBarrel/benefits';
 import Button from '../components/button';
 
+const INITIAL_STATE = {
+  name: '',
+  email: '',
+  phone: '',
+  body: '',
+  status: 'IDLE',
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'updateFieldValue':
+      return {
+        ...state,
+        [action.field]: action.value,
+      };
+
+    case 'updateStatus':
+      return { ...state, status: action.status };
+    case 'reset':
+    default:
+      return INITIAL_STATE;
+  }
+};
+
 const Investor = () => {
+  const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
+
+  const setStatus = (status) => dispatch({ type: 'updateStatus', status });
+
+  const updateFieldValue = (field) => (event) => {
+    dispatch({
+      type: 'updateFieldValue',
+      field,
+      value: event.target.value,
+    });
+  };
+console.log('state', state)
+const handleSubmit = (event) => {
+  event.preventDefault();
+  setStatus('PENDING');
+  console.log('submitted')
+  
+  fetch('/api/contact', {
+    method: 'POST',
+    body: JSON.stringify(state),
+  })
+  .then((res) => res.json())
+  .then((res) => {
+    console.log(res);
+    setStatus('SUCCESS');
+  })
+  .catch((error) => {
+    console.error(error);
+    setStatus('ERROR');
+  });
+};
+
+  if (state.status === 'SUCCESS') {
+    return (
+      <p>
+        Message Sent!
+        <button type="reset" onClick={() => dispatch({ type: 'reset' })}>
+          Reset
+        </button>
+      </p>
+    );
+  }
+
   return (
     <Layout>
       <div className="mx-4 mt-6 md:mx-28 lg:mt-20 lg:mx-auto max-w-4xl">
@@ -35,46 +103,55 @@ const Investor = () => {
         <h3 className="text-lg font-extrabold mt-4 pb-2 md:text-2xl">
           Contact Us
         </h3>
-        <form action="" className="flex flex-col">
-          <div className="flex flex-col mb-5">
+        <form action="" className="flex flex-col" onSubmit={handleSubmit}>
+          <label className="flex flex-col mb-5">
             <input
               type="text"
               name="name"
               id="name"
               placeholder="Name"
+              value={state.name}
+              onChange={updateFieldValue('name')}
               className="box-border rounded-sm border-dark-black border-1 h-8"
             />
-          </div>
-          <div className="flex flex-col mb-5">
+          </label>
+          <label className="flex flex-col mb-5">
             <input
               type="email"
               name="email"
               id="email"
               placeholder="Email Address"
+              value={state.email}
+              onChange={updateFieldValue('email')}
               className="rounded-sm border-dark-black border-1 h-8"
             />
-          </div>
-          <div className="flex flex-col mb-5">
+          </label>
+          <label className="flex flex-col mb-5">
             <input
               type="phone"
               name="phone"
               id="phone"
               placeholder="Phone Number"
+              value={state.phone}
+              onChange={updateFieldValue('phone')}
               className="rounded-sm border-dark-black border-1 h-8"
             />
-          </div>
-          <div className="flex flex-col mb-5">
+          </label>
+          <label className="flex flex-col mb-5">
             <textarea
-              type="message"
-              name="message"
-              id="message"
+              type="body"
+              name="body"
+              id="body"
               placeholder="Message"
               rows="10"
+              value={state.body}
+              onChange={updateFieldValue('body')}
               className="rounded-sm border-dark-black border-1"
             />
-          </div>
+          </label>
           <div className="self-center mb-12 lg:self-end">
-            <Button text="SUBMIT" />
+            <button>SEND</button>
+            {/* <Button text="SUBMIT" /> */}
           </div>
         </form>
       </div>
