@@ -3,6 +3,16 @@ import Benefits from '../components/beeBarrel/benefits';
 import Button from '../components/button';
 
 const Investor = () => {
+  //TO DO: get values from form
+  // Send values to api
+  // send email to saiafonua@gmail.com on submit
+  const sendContactInfo = (e) => {
+    e.preventDefault();
+    console.log(e.target.name.value)
+    console.log(e.target.email.value)
+    console.log(e.target.phone.value)
+    console.log(e.target.message.value)
+  }
   return (
     <Layout>
       <div className="mx-4 mt-6 md:mx-28 lg:mt-20 lg:mx-auto max-w-4xl">
@@ -35,7 +45,7 @@ const Investor = () => {
         <h3 className="text-lg font-extrabold mt-4 pb-2 md:text-2xl">
           Contact Us
         </h3>
-        <form action="" className="flex flex-col">
+        <form action="" className="flex flex-col" onSubmit={sendContactInfo}>
           <div className="flex flex-col mb-5">
             <input
               type="text"
