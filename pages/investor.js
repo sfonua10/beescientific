@@ -6,12 +6,23 @@ const Investor = () => {
   //TO DO: get values from form
   // Send values to api
   // send email to saiafonua@gmail.com on submit
-  const sendContactInfo = (e) => {
+  const sendContactInfo = async (e) => {
     e.preventDefault();
-    console.log(e.target.name.value)
-    console.log(e.target.email.value)
-    console.log(e.target.phone.value)
-    console.log(e.target.message.value)
+
+    const res = await fetch('/api/contact', {
+      body: JSON.stringify({
+        name: e.target.name.value,
+        email: e.target.email.value,
+        phone: e.target.phone.value,
+        message: e.target.message.value,
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST'
+    })
+
+    const result = await res.json();
   }
   return (
     <Layout>
